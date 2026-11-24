@@ -16,7 +16,9 @@ data class NormalizedBoardLayout(
     val stock: NormalizedBox,
     val waste: NormalizedBox,
     val foundations: List<NormalizedBox>,
-    val tableauColumns: List<NormalizedBox>
+    val tableauColumns: List<NormalizedBox>,
+    /** Normalized bounds of the complete game viewport inside the captured display. */
+    val screenBounds: NormalizedBox = NormalizedBox(0f, 0f, 1f, 1f)
 ) {
     init {
         require(foundations.size == 4) { "Four foundation regions required" }

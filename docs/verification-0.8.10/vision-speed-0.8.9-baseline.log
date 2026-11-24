@@ -1,0 +1,5 @@
+initial=الأعمدة: 1:AS | 2:KD | 3:QC | 4:JH | 5:TC | 6:9D | 7:8S | السحب: فارغ | أوراق مقروءة: 7 | مناطق غير مؤكدة: 0 unknown=[]
+DESKTOP full-board+HUD steady-frame medianMs=3.179 p95Ms=3.908 maxMs=6.983 samples=50 singlePixelCallsPerFrame=218345 bulkCallsPerFrame=0
+DESKTOP changing-board medianMs=3.335 p95Ms=4.665 maxMs=5.649 samples=60 (all semantic transitions checked)
+USER 137242.jpg الأعمدة: 1:2S | 2:؟ | 3:؟ | 4:؟ | 5:4S | 6:؟ | 7:؟ | السحب: 6S | أوراق مقروءة: 5 | مناطق غير مؤكدة: 5 stock=AVAILABLE unknown=[T1, T2, T3, T5, T6] hud=Reading(score=240, remainingSeconds=227, confidence=0.968)
+USER 137246.jpg الأعمدة: 1:2S | 2:؟ | 3:؟ | 4:؟ | 5:4S | 6:؟ | 7:6H | السحب: ورقة ظاهرة غير مقروءة | أوراق مقروءة: 5 | مناطق غير مؤكدة: 5 stock=AVAILABLE unknown=[T1, T2, T3, T5, W] hud=Reading(score=260, remainingSeconds=101, confidence=0.96850395)

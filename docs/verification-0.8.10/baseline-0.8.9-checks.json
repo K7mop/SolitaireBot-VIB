@@ -1,0 +1,92 @@
+[
+  {
+    "check": "android-kotlin-typecheck",
+    "exit_code": 0,
+    "elapsed_seconds": 16.398
+  },
+  {
+    "check": "jvm-tests-compile",
+    "exit_code": 0,
+    "elapsed_seconds": 5.869
+  },
+  {
+    "check": "jvm-tests",
+    "exit_code": 1,
+    "elapsed_seconds": 1.087
+  },
+  {
+    "check": "core-smoke",
+    "exit_code": 0,
+    "elapsed_seconds": 8.362
+  },
+  {
+    "check": "control-regression",
+    "exit_code": 0,
+    "elapsed_seconds": 10.412
+  },
+  {
+    "check": "vision-regression",
+    "exit_code": 0,
+    "elapsed_seconds": 15.794
+  },
+  {
+    "check": "automatic-glyph-regression",
+    "exit_code": 0,
+    "elapsed_seconds": 12.016
+  },
+  {
+    "check": "automatic-board-regression",
+    "exit_code": 0,
+    "elapsed_seconds": 15.825
+  },
+  {
+    "check": "waste-occupancy-regression",
+    "exit_code": 0,
+    "elapsed_seconds": 6.797
+  },
+  {
+    "check": "strategy-regression",
+    "exit_code": 0,
+    "elapsed_seconds": 8.933
+  },
+  {
+    "check": "smart-089",
+    "exit_code": 0,
+    "elapsed_seconds": 9.335
+  },
+  {
+    "check": "hud-089",
+    "exit_code": 0,
+    "elapsed_seconds": 6.113
+  },
+  {
+    "check": "strategy-comparison-089",
+    "exit_code": 0,
+    "elapsed_seconds": 9.374
+  },
+  {
+    "check": "resource-compile",
+    "exit_code": 0,
+    "elapsed_seconds": 0.004
+  },
+  {
+    "check": "resource-link",
+    "exit_code": 0,
+    "elapsed_seconds": 0.276
+  },
+  {
+    "check": "manifest-badging",
+    "exit_code": 0,
+    "elapsed_seconds": 0.002
+  },
+  {
+    "check": "resource-java",
+    "exit_code": 0,
+    "elapsed_seconds": 0.433
+  },
+  {
+    "check": "android-dex",
+    "exit_code": 0,
+    "elapsed_seconds": 5.257
+  }
+]

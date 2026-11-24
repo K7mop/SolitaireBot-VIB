@@ -1,0 +1,2 @@
+production controller cycle=297ms; capture interval=33ms; stroke=145ms; first dispatch=231ms; next dispatch=528ms; sampled=17
+PASS: two sequential production-controller actions completed within the stated latency budget

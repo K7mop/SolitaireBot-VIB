@@ -1,0 +1,13 @@
+PASS 1: verified move waits for cooldown then dispatches next move; no false failure
+PASS 2: stop invalidates queued touch before accessibility dispatch
+PASS 3: late callback cannot complete or cancel another action
+PASS 4: missing dispatch callback times out and restores controls
+PASS 5: one verification timeout owner stops auto and updates displayed status
+PASS 6: guard stop restores overlay and restart retains the attempted edge
+PASS 7: manual mode reacquires frames, sends exactly one move and restores after verification
+PASS 8: same-package dialog window invalidates queued gesture
+PASS 9: legacy trained glyphs with zero card-example counter remain usable for read-only mode
+PASS 10: stock actions require positive confident waste evidence; known empty waste permits draw
+PASS 11: watchdog uses last stable frame: transient loss after session 30s survives, sustained loss stops
+PASS 12: late vision publication after stop or capture replacement cannot publish or dispatch after restart
+ALL 12 production-control regression scenarios passed

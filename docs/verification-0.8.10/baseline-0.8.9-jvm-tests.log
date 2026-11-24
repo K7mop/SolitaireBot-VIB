@@ -1,0 +1,159 @@
+╷
+├─ JUnit Platform Suite ✔
+├─ JUnit Jupiter ✔
+│  ├─ CoreRulesTest ✔
+│  │  ├─ findAcesAndDrawThree() ✔
+│  │  ├─ clockIsMonotonicAndStopsAtFiveMinutes() ✔
+│  │  ├─ moveAlternatingDescendingRunAndSimulate() ✔
+│  │  ├─ wasteAndFoundationRules() ✔
+│  │  ├─ parseCardsAndRejectBadInput() ✔
+│  │  ├─ duplicateVisibleCardsRefuseMoves() ✔
+│  │  ├─ drawThreeStockAndRecyclePreserveOrder() ✔
+│  │  ├─ scorePrefersUncoverAndAvoidsLoop() ✘ Expected value to be true.
+│  │  ├─ unknownRedealsNeverAutoRecycle() ✔
+│  │  ├─ foundationsCannotContainVisibleDuplicates() ✔
+│  │  └─ neverTreatUnobservedAsEmpty() ✔
+│  ├─ AutomaticStockAndFlipTest ✔
+│  │  ├─ repeatStockCycleAndFailedFlipCannotBeRetriedByRestarting() ✔
+│  │  ├─ drawOneRequiresFreshRecognizedWasteAndStockProof() ✔
+│  │  ├─ unknownRedealsNeedPositiveRecycleControlAndVisibleWaste() ✘ Expected value to be false.
+│  │  ├─ drawThreeLastPacketCanContainFewerThanThree() ✔
+│  │  ├─ drawOneChangesOnlyOneStockCardAndPreservesRecyclingOrder() ✔
+│  │  ├─ hiddenPileCannotDisappearDuringOneCardTransfer() ✔
+│  │  ├─ movingLastFaceUpCardMayRevealBackThenFlipIt() ✔
+│  │  ├─ flipRequiresBothPositiveBackAndNewlyRecognizedCard() ✔
+│  │  ├─ legalDrawUsesConfiguredVariantAndRejectsUnsupportedCount() ✔
+│  │  ├─ simulatedFlipNeverInventsHiddenCardOrAnEmptyColumn() ✔
+│  │  ├─ exposedBackCannotServeAsEmptyKingDestinationAndRoundTripsEditor() ✔
+│  │  ├─ visuallyAvailableRecycleStillNeedsConfirmedPhysicalTransition() ✔
+│  │  ├─ solverPrefersRevealAndLargerHiddenPileBeforeDrawing() ✔
+│  │  └─ unreadableColumnDoesNotBecomeAFlipCandidate() ✔
+│  ├─ BoardValidationAndStrategyTest ✔
+│  │  ├─ recoveryFromFoundationRemainsSelectable() ✘ actual value is null ==> expected: not <null>
+│  │  ├─ duplicateFoundationEntryIsRejected() ✔
+│  │  ├─ timeUrgencyIsUsedWithoutChangingMoveLegality() ✔
+│  │  ├─ boundedStrategyPrefersExposingKnownHiddenCard() ✔
+│  │  ├─ hiddenCountCannotExceedSingleDeck() ✔
+│  │  └─ combinedKnownCardTotalCannotExceedDeck() ✔
+│  ├─ AutoPlayGuardTest ✔
+│  │  ├─ manual dispatch shares failed move memory() ✔
+│  │  ├─ unknown hidden counts cannot bypass attempted state key() ✔
+│  │  ├─ restart preserves attempted and failed edges() ✔
+│  │  ├─ will not repeat the same move against unchanged board() ✔
+│  │  ├─ failure immediately stops autoplay() ✔
+│  │  ├─ new capture explicitly clears history() ✔
+│  │  ├─ hard cap prevents endless sessions() ✔
+│  │  └─ requires an explicit start() ✔
+│  └─ VisualSafetyTest ✔
+│     ├─ wasteMoveRequiresNewDestinationAndChangedWaste() ✔
+│     ├─ unexplainedOtherColumnChangeRejectsSuccess() ✔
+│     ├─ repeatedObservationIsStable() ✔
+│     ├─ onlyVisuallyVerifiableStockChanges() ✔
+│     ├─ unreadableSourceIsNotProofOfRemoval() ✔
+│     ├─ rollbackOfAnAceCanBeVerifiedWithAnEmptyFoundation() ✔
+│     ├─ requiresObservedFoundationAndSourceChange() ✔
+│     ├─ positiveObservedRevealCanConfirmFoundationMove() ✔
+│     ├─ changedDeeperRunIsNotStable() ✔
+│     ├─ recycleRequiresPositiveStockAndWasteEmptyProof() ✔
+│     └─ verifiesEveryCardInAMultiCardRun() ✔
+└─ JUnit Vintage ✔
+   ├─ LiveSessionTest ✔
+   │  ├─ verification requires two independent post delivery frames ✔
+   │  ├─ old frame cannot be relabelled fresh by OCR completion ✔
+   │  ├─ verification checks endpoint confidence not board average ✔
+   │  ├─ other capture generation is ignored ✔
+   │  ├─ cancel invalidates queued dispatch ✔
+   │  ├─ late callback cannot change a newer pending action ✔
+   │  ├─ verification timeout is a single terminal event ✔
+   │  └─ queued action has a deadline even without a gesture callback ✔
+   ├─ FrameStampGateTest ✔
+   │  ├─ newReaderHasIndependentClockSequence ✔
+   │  └─ duplicatedAndOutOfOrderFramesCannotCountAsFreshEvidence ✔
+   ├─ CaptureRoundStateTest ✔
+   │  ├─ anOldFrameCannotBeBoundToANewRound ✔
+   │  ├─ roundCannotStartWithoutAnActiveCapture ✔
+   │  ├─ captureAndProcessRecreationNeverStartTheRound ✔
+   │  └─ resizePreservesTheOriginalDeadlineButNewCaptureDoesNot ✔
+   ├─ AutomaticSetupGateTest ✔
+   │  ├─ stoppedRecognitionCannotRestartAutomaticPlay ✔
+   │  ├─ cancelledTokenDoesNotReviveWhenRequestNumberIsReused ✔
+   │  ├─ newScreenshotSupersedesOldRecognition ✔
+   │  ├─ captureResizeInvalidatesOldCoordinates ✔
+   │  ├─ automaticStartIsDeliveredOnlyOnce ✔
+   │  └─ oldSaveCannotAcquireNewSetupRequest ✔
+   ├─ OverlayPlacementTest ✔
+   │  ├─ bottomSpaceUsedWhenTopIsOccupied ✔
+   │  ├─ impossibleSpaceIsRejectedInsteadOfCoveringCards ✔
+   │  └─ stopButtonRemainsOutsideBoardAndSystemInsets ✔
+   ├─ CaptureRequestGateTest ✔
+   │  ├─ obscuredContentAndFutureFrameTimestampsAreRejected ✔
+   │  ├─ missingFramesExpireOnceAfterFifteenSeconds ✔
+   │  ├─ lateOverlayHideExtendsDelayBeyondNotificationCountdown ✔
+   │  ├─ overlayMustBeHiddenAndItsFramesDrainedFirst ✔
+   │  ├─ notificationWaitsThreeSecondsAndRequiresNewFrame ✔
+   │  ├─ clockRollbackAndPreRequestHideAreRejected ✔
+   │  ├─ staleCallbacksCannotAffectReplacementRequest ✔
+   │  └─ cancelledRequestCannotSaveOrBeResurrected ✔
+   └─ SnapshotProofPolicyTest ✔
+      ├─ expiredAndFutureImagesCannotArmCalibration ✔
+      ├─ exactSnapshotAndActiveCaptureAreRequired ✔
+      └─ malformedOrOverflowingTimesAndBlankIdentityAreRejected ✔
+
+Failures (3):
+  JUnit Jupiter:CoreRulesTest:scorePrefersUncoverAndAvoidsLoop()
+    MethodSource [className = 'com.retq.solitairebot.core.CoreRulesTest', methodName = 'scorePrefersUncoverAndAvoidsLoop', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected value to be true.
+       org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:38)
+       org.junit.jupiter.api.Assertions.fail(Assertions.java:138)
+       kotlin.test.junit5.JUnit5Asserter.fail(JUnitSupport.kt:56)
+       kotlin.test.Asserter.assertTrue(Assertions.kt:694)
+       kotlin.test.junit5.JUnit5Asserter.assertTrue(JUnitSupport.kt:30)
+       kotlin.test.Asserter.assertTrue(Assertions.kt:704)
+       kotlin.test.junit5.JUnit5Asserter.assertTrue(JUnitSupport.kt:30)
+       kotlin.test.AssertionsKt__AssertionsKt.assertTrue(Assertions.kt:44)
+       kotlin.test.AssertionsKt.assertTrue(Unknown Source)
+       kotlin.test.AssertionsKt__AssertionsKt.assertTrue$default(Assertions.kt:42)
+       [...]
+  JUnit Jupiter:AutomaticStockAndFlipTest:unknownRedealsNeedPositiveRecycleControlAndVisibleWaste()
+    MethodSource [className = 'com.retq.solitairebot.core.AutomaticStockAndFlipTest', methodName = 'unknownRedealsNeedPositiveRecycleControlAndVisibleWaste', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected value to be false.
+       org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:38)
+       org.junit.jupiter.api.Assertions.fail(Assertions.java:138)
+       kotlin.test.junit5.JUnit5Asserter.fail(JUnitSupport.kt:56)
+       kotlin.test.Asserter.assertTrue(Assertions.kt:694)
+       kotlin.test.junit5.JUnit5Asserter.assertTrue(JUnitSupport.kt:30)
+       kotlin.test.Asserter.assertTrue(Assertions.kt:704)
+       kotlin.test.junit5.JUnit5Asserter.assertTrue(JUnitSupport.kt:30)
+       kotlin.test.AssertionsKt__AssertionsKt.assertFalse(Assertions.kt:58)
+       kotlin.test.AssertionsKt.assertFalse(Unknown Source)
+       kotlin.test.AssertionsKt__AssertionsKt.assertFalse$default(Assertions.kt:56)
+       [...]
+  JUnit Jupiter:BoardValidationAndStrategyTest:recoveryFromFoundationRemainsSelectable()
+    MethodSource [className = 'com.retq.solitairebot.core.BoardValidationAndStrategyTest', methodName = 'recoveryFromFoundationRemainsSelectable', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: actual value is null ==> expected: not <null>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertNotNull.failNull(AssertNotNull.java:49)
+       org.junit.jupiter.api.AssertNotNull.assertNotNull(AssertNotNull.java:35)
+       org.junit.jupiter.api.Assertions.assertNotNull(Assertions.java:312)
+       kotlin.test.junit5.JUnit5Asserter.assertNotNull(JUnitSupport.kt:48)
+       kotlin.test.AssertionsKt__AssertionsKt.assertNotNull(Assertions.kt:145)
+       kotlin.test.AssertionsKt.assertNotNull(Unknown Source)
+       kotlin.test.AssertionsKt__AssertionsKt.assertNotNull$default(Assertions.kt:143)
+       kotlin.test.AssertionsKt.assertNotNull$default(Unknown Source)
+       [...]
+
+Test run finished after 263 ms
+[        15 containers found      ]
+[         0 containers skipped    ]
+[        15 containers started    ]
+[         0 containers aborted    ]
+[        15 containers successful ]
+[         0 containers failed     ]
+[        84 tests found           ]
+[         0 tests skipped         ]
+[        84 tests started         ]
+[         0 tests aborted         ]
+[        81 tests successful      ]
+[         3 tests failed          ]
+

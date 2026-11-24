@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="JUnit Vintage" tests="34" skipped="0" failures="0" errors="0" time="0.046" hostname="11f31e661961" timestamp="2026-11-21T04:45:37">
+<testcase name="exactSnapshotAndActiveCaptureAreRequired" classname="com.retq.solitairebot.storage.SnapshotProofPolicyTest" time="0">
+<system-out>
+unique-id: [engine:junit-vintage]/[runner:com.retq.solitairebot.storage.SnapshotProofPolicyTest]/[test:exactSnapshotAndActiveCaptureAreRequired(com.retq.solitairebot.storage.SnapshotProofPolicyTest)]
+display-name: exactSnapshotAndActiveCaptureAreRequired
+</system-out>
+</testcase>
+<testcase name="duplicatedAndOutOfOrderFramesCannotCountAsFreshEvidence" classname="com.retq.solitairebot.capture.FrameStampGateTest" time="0">
+<system-out>
+unique-id: [engine:junit-vintage]/[runner:com.retq.solitairebot.capture.FrameStampGateTest]/[test:duplicatedAndOutOfOrderFramesCannotCountAsFreshEvidence(com.retq.solitairebot.capture.FrameStampGateTest)]
+display-name: duplicatedAndOutOfOrderFramesCannotCountAsFreshEvidence
+</system-out>
+</testcase>
+<testcase name="lateOverlayHideExtendsDelayBeyondNotificationCountdown" classname="com.retq.solitairebot.capture.CaptureRequestGateTest" time="0">
+<system-out>
+unique-id: [engine:junit-vintage]/[runner:com.retq.solitairebot.capture.CaptureRequestGateTest]/[test:lateOverlayHideExtendsDelayBeyondNotificationCountdown(com.retq.solitairebot.capture.CaptureRequestGateTest)]
+display-name: lateOverlayHideExtendsDelayBeyondNotificationCountdown
+</system-out>
+</testcase>
+<testcase name="roundCannotStartWithoutAnActiveCapture" classname="com.retq.solitairebot.storage.CaptureRoundStateTest" time="0">
+<system-out>
+unique-id: [engine:junit-vintage]/[runner:com.retq.solitairebot.storage.CaptureRoundStateTest]/[test:roundCannotStartWithoutAnActiveCapture(com.retq.solitairebot.storage.CaptureRoundStateTest)]
+display-name: roundCannotStartWithoutAnActiveCapture
+</system-out>
+</testcase>
+<testcase name="impossibleSpaceIsRejectedInsteadOfCoveringCards" classname="com.retq.solitairebot.control.OverlayPlacementTest" time="0">
+<system-out>
+unique-id: [engine:junit-vintage]/[runner:com.retq.solitairebot.control.OverlayPlacementTest]/[test:impossibleSpaceIsRejectedInsteadOfCoveringCards(com.retq.solitairebot.control.OverlayPlacementTest)]
+display-name: impossibleSpaceIsRejectedInsteadOfCoveringCards
+</system-out>
+</testcase>
+<testcase name="old frame cannot be relabelled fresh by OCR completion" classname="com.retq.solitairebot.control.LiveSessionTest" time="0">
+<system-out>
+unique-id: [engine:junit-vintage]/[runner:com.retq.solitairebot.control.LiveSessionTest]/[test:old frame cannot be relabelled fresh by OCR completion(com.retq.solitairebot.control.LiveSessionTest)]
+display-name: old frame cannot be relabelled fresh by OCR completion
+</system-out>
+</testcase>
+<testcase name="missingFramesExpireOnceAfterFifteenSeconds" classname="com.retq.solitairebot.capture.CaptureRequestGateTest" time="0">
+<system-out>
+unique-id: [engine:junit-vintage]/[runner:com.retq.solitairebot.capture.CaptureRequestGateTest]/[test:missingFramesExpireOnceAfterFifteenSeconds(com.retq.solitairebot.capture.CaptureRequestGateTest)]
+display-name: missingFramesExpireOnceAfterFifteenSeconds
+</system-out>
+</testcase>
+<testcase name="bottomSpaceUsedWhenTopIsOccupied" classname="com.retq.solitairebot.control.OverlayPlacementTest" time="0.008">
+<system-out>
+unique-id: [engine:junit-vintage]/[runner:com.retq.solitairebot.control.OverlayPlacementTest]/[test:bottomSpaceUsedWhenTopIsOccupied(com.retq.solitairebot.control.OverlayPlacementTest)]
+display-name: bottomSpaceUsedWhenTopIsOccupied
+</system-out>
+</testcase>
+<testcase name="malformedOrOverflowingTimesAndBlankIdentityAreRejected" classname="com.retq.solitairebot.storage.SnapshotProofPolicyTest" time="0">
+<system-out>
+unique-id: [engine:junit-vintage]/[runner:com.retq.solitairebot.storage.SnapshotProofPolicyTest]/[test:malformedOrOverflowingTimesAndBlankIdentityAreRejected(com.retq.solitairebot.storage.SnapshotProofPolicyTest)]
+display-name: malformedOrOverflowingTimesAndBlankIdentityAreRejected
+</system-out>
+</testcase>
+<testcase name="captureResizeInvalidatesOldCoordinates" classname="com.retq.solitairebot.capture.AutomaticSetupGateTest" time="0">
+<system-out>
+unique-id: [engine:junit-vintage]/[runner:com.retq.solitairebot.capture.AutomaticSetupGateTest]/[test:captureResizeInvalidatesOldCoordinates(com.retq.solitairebot.capture.AutomaticSetupGateTest)]
+display-name: captureResizeInvalidatesOldCoordinates
+</system-out>
+</testcase>
+<testcase name="automaticStartIsDeliveredOnlyOnce" classname="com.retq.solitairebot.capture.AutomaticSetupGateTest" time="0">
+<system-out>
+unique-id: [engine:junit-vintage]/[runner:com.retq.solitairebot.capture.AutomaticSetupGateTest]/[test:automaticStartIsDeliveredOnlyOnce(com.retq.solitairebot.capture.AutomaticSetupGateTest)]
+display-name: automaticStartIsDeliveredOnlyOnce
+</system-out>
+</testcase>
+<testcase name="newReaderHasIndependentClockSequence" classname="com.retq.solitairebot.capture.FrameStampGateTest" time="0">
+<system-out>
+unique-id: [engine:junit-vintage]/[runner:com.retq.solitairebot.capture.FrameStampGateTest]/[test:newReaderHasIndependentClockSequence(com.retq.solitairebot.capture.FrameStampGateTest)]
+display-name: newReaderHasIndependentClockSequence
+</system-out>
+</testcase>
+<testcase name="captureAndProcessRecreationNeverStartTheRound" classname="com.retq.solitairebot.storage.CaptureRoundStateTest" time="0">
+<system-out>
+unique-id: [engine:junit-vintage]/[runner:com.retq.solitairebot.storage.CaptureRoundStateTest]/[test:captureAndProcessRecreationNeverStartTheRound(com.retq.solitairebot.storage.CaptureRoundStateTest)]
+display-name: captureAndProcessRecreationNeverStartTheRound
+</system-out>
+</testcase>
+<testcase name="obscuredContentAndFutureFrameTimestampsAreRejected" classname="com.retq.solitairebot.capture.CaptureRequestGateTest" time="0">
+<system-out>
+unique-id: [engine:junit-vintage]/[runner:com.retq.solitairebot.capture.CaptureRequestGateTest]/[test:obscuredContentAndFutureFrameTimestampsAreRejected(com.retq.solitairebot.capture.CaptureRequestGateTest)]
+display-name: obscuredContentAndFutureFrameTimestampsAreRejected
+</system-out>
+</testcase>
+<testcase name="staleCallbacksCannotAffectReplacementRequest" classname="com.retq.solitairebot.capture.CaptureRequestGateTest" time="0">
+<system-out>
+unique-id: [engine:junit-vintage]/[runner:com.retq.solitairebot.capture.CaptureRequestGateTest]/[test:staleCallbacksCannotAffectReplacementRequest(com.retq.solitairebot.capture.CaptureRequestGateTest)]
+display-name: staleCallbacksCannotAffectReplacementRequest
+</system-out>
+</testcase>
+<testcase name="queued action has a deadline even without a gesture callback" classname="com.retq.solitairebot.control.LiveSessionTest" time="0">
+<system-out>
+unique-id: [engine:junit-vintage]/[runner:com.retq.solitairebot.control.LiveSessionTest]/[test:queued action has a deadline even without a gesture callback(com.retq.solitairebot.control.LiveSessionTest)]
+display-name: queued action has a deadline even without a gesture callback
+</system-out>
+</testcase>
+<testcase name="cancelledRequestCannotSaveOrBeResurrected" classname="com.retq.solitairebot.capture.CaptureRequestGateTest" time="0">
+<system-out>
+unique-id: [engine:junit-vintage]/[runner:com.retq.solitairebot.capture.CaptureRequestGateTest]/[test:cancelledRequestCannotSaveOrBeResurrected(com.retq.solitairebot.capture.CaptureRequestGateTest)]
+display-name: cancelledRequestCannotSaveOrBeResurrected
+</system-out>
+</testcase>
+<testcase name="expiredAndFutureImagesCannotArmCalibration" classname="com.retq.solitairebot.storage.SnapshotProofPolicyTest" time="0">
+<system-out>
+unique-id: [engine:junit-vintage]/[runner:com.retq.solitairebot.storage.SnapshotProofPolicyTest]/[test:expiredAndFutureImagesCannotArmCalibration(com.retq.solitairebot.storage.SnapshotProofPolicyTest)]
+display-name: expiredAndFutureImagesCannotArmCalibration
+</system-out>
+</testcase>
+<testcase name="verification requires two independent post delivery frames" classname="com.retq.solitairebot.control.LiveSessionTest" time="0.009">
+<system-out>
+unique-id: [engine:junit-vintage]/[runner:com.retq.solitairebot.control.LiveSessionTest]/[test:verification requires two independent post delivery frames(com.retq.solitairebot.control.LiveSessionTest)]
+display-name: verification requires two independent post delivery frames
+</system-out>
+</testcase>
+<testcase name="late callback cannot change a newer pending action" classname="com.retq.solitairebot.control.LiveSessionTest" time="0">
+<system-out>
+unique-id: [engine:junit-vintage]/[runner:com.retq.solitairebot.control.LiveSessionTest]/[test:late callback cannot change a newer pending action(com.retq.solitairebot.control.LiveSessionTest)]
+display-name: late callback cannot change a newer pending action
+</system-out>
+</testcase>
+<testcase name="oldSaveCannotAcquireNewSetupRequest" classname="com.retq.solitairebot.capture.AutomaticSetupGateTest" time="0">
+<system-out>
+unique-id: [engine:junit-vintage]/[runner:com.retq.solitairebot.capture.AutomaticSetupGateTest]/[test:oldSaveCannotAcquireNewSetupRequest(com.retq.solitairebot.capture.AutomaticSetupGateTest)]
+display-name: oldSaveCannotAcquireNewSetupRequest
+</system-out>
+</testcase>
+<testcase name="verification timeout is a single terminal event" classname="com.retq.solitairebot.control.LiveSessionTest" time="0">
+<system-out>
+unique-id: [engine:junit-vintage]/[runner:com.retq.solitairebot.control.LiveSessionTest]/[test:verification timeout is a single terminal event(com.retq.solitairebot.control.LiveSessionTest)]
+display-name: verification timeout is a single terminal event
+</system-out>
+</testcase>
+<testcase name="resizePreservesTheOriginalDeadlineButNewCaptureDoesNot" classname="com.retq.solitairebot.storage.CaptureRoundStateTest" time="0">
+<system-out>
+unique-id: [engine:junit-vintage]/[runner:com.retq.solitairebot.storage.CaptureRoundStateTest]/[test:resizePreservesTheOriginalDeadlineButNewCaptureDoesNot(com.retq.solitairebot.storage.CaptureRoundStateTest)]
+display-name: resizePreservesTheOriginalDeadlineButNewCaptureDoesNot
+</system-out>
+</testcase>
+<testcase name="anOldFrameCannotBeBoundToANewRound" classname="com.retq.solitairebot.storage.CaptureRoundStateTest" time="0">
+<system-out>
+unique-id: [engine:junit-vintage]/[runner:com.retq.solitairebot.storage.CaptureRoundStateTest]/[test:anOldFrameCannotBeBoundToANewRound(com.retq.solitairebot.storage.CaptureRoundStateTest)]
+display-name: anOldFrameCannotBeBoundToANewRound
+</system-out>
+</testcase>
+<testcase name="overlayMustBeHiddenAndItsFramesDrainedFirst" classname="com.retq.solitairebot.capture.CaptureRequestGateTest" time="0">
+<system-out>
+unique-id: [engine:junit-vintage]/[runner:com.retq.solitairebot.capture.CaptureRequestGateTest]/[test:overlayMustBeHiddenAndItsFramesDrainedFirst(com.retq.solitairebot.capture.CaptureRequestGateTest)]
+display-name: overlayMustBeHiddenAndItsFramesDrainedFirst
+</system-out>
+</testcase>
+<testcase name="cancelledTokenDoesNotReviveWhenRequestNumberIsReused" classname="com.retq.solitairebot.capture.AutomaticSetupGateTest" time="0">
+<system-out>
+unique-id: [engine:junit-vintage]/[runner:com.retq.solitairebot.capture.AutomaticSetupGateTest]/[test:cancelledTokenDoesNotReviveWhenRequestNumberIsReused(com.retq.solitairebot.capture.AutomaticSetupGateTest)]
+display-name: cancelledTokenDoesNotReviveWhenRequestNumberIsReused
+</system-out>
+</testcase>
+<testcase name="cancel invalidates queued dispatch" classname="com.retq.solitairebot.control.LiveSessionTest" time="0">
+<system-out>
+unique-id: [engine:junit-vintage]/[runner:com.retq.solitairebot.control.LiveSessionTest]/[test:cancel invalidates queued dispatch(com.retq.solitairebot.control.LiveSessionTest)]
+display-name: cancel invalidates queued dispatch
+</system-out>
+</testcase>
+<testcase name="stopButtonRemainsOutsideBoardAndSystemInsets" classname="com.retq.solitairebot.control.OverlayPlacementTest" time="0">
+<system-out>
+unique-id: [engine:junit-vintage]/[runner:com.retq.solitairebot.control.OverlayPlacementTest]/[test:stopButtonRemainsOutsideBoardAndSystemInsets(com.retq.solitairebot.control.OverlayPlacementTest)]
+display-name: stopButtonRemainsOutsideBoardAndSystemInsets
+</system-out>
+</testcase>
+<testcase name="stoppedRecognitionCannotRestartAutomaticPlay" classname="com.retq.solitairebot.capture.AutomaticSetupGateTest" time="0">
+<system-out>
+unique-id: [engine:junit-vintage]/[runner:com.retq.solitairebot.capture.AutomaticSetupGateTest]/[test:stoppedRecognitionCannotRestartAutomaticPlay(com.retq.solitairebot.capture.AutomaticSetupGateTest)]
+display-name: stoppedRecognitionCannotRestartAutomaticPlay
+</system-out>
+</testcase>
+<testcase name="newScreenshotSupersedesOldRecognition" classname="com.retq.solitairebot.capture.AutomaticSetupGateTest" time="0">
+<system-out>
+unique-id: [engine:junit-vintage]/[runner:com.retq.solitairebot.capture.AutomaticSetupGateTest]/[test:newScreenshotSupersedesOldRecognition(com.retq.solitairebot.capture.AutomaticSetupGateTest)]
+display-name: newScreenshotSupersedesOldRecognition
+</system-out>
+</testcase>
+<testcase name="other capture generation is ignored" classname="com.retq.solitairebot.control.LiveSessionTest" time="0">
+<system-out>
+unique-id: [engine:junit-vintage]/[runner:com.retq.solitairebot.control.LiveSessionTest]/[test:other capture generation is ignored(com.retq.solitairebot.control.LiveSessionTest)]
+display-name: other capture generation is ignored
+</system-out>
+</testcase>
+<testcase name="clockRollbackAndPreRequestHideAreRejected" classname="com.retq.solitairebot.capture.CaptureRequestGateTest" time="0">
+<system-out>
+unique-id: [engine:junit-vintage]/[runner:com.retq.solitairebot.capture.CaptureRequestGateTest]/[test:clockRollbackAndPreRequestHideAreRejected(com.retq.solitairebot.capture.CaptureRequestGateTest)]
+display-name: clockRollbackAndPreRequestHideAreRejected
+</system-out>
+</testcase>
+<testcase name="notificationWaitsThreeSecondsAndRequiresNewFrame" classname="com.retq.solitairebot.capture.CaptureRequestGateTest" time="0">
+<system-out>
+unique-id: [engine:junit-vintage]/[runner:com.retq.solitairebot.capture.CaptureRequestGateTest]/[test:notificationWaitsThreeSecondsAndRequiresNewFrame(com.retq.solitairebot.capture.CaptureRequestGateTest)]
+display-name: notificationWaitsThreeSecondsAndRequiresNewFrame
+</system-out>
+</testcase>
+<testcase name="verification checks endpoint confidence not board average" classname="com.retq.solitairebot.control.LiveSessionTest" time="0">
+<system-out>
+unique-id: [engine:junit-vintage]/[runner:com.retq.solitairebot.control.LiveSessionTest]/[test:verification checks endpoint confidence not board average(com.retq.solitairebot.control.LiveSessionTest)]
+display-name: verification checks endpoint confidence not board average
+</system-out>
+</testcase>
+<system-out>
+unique-id: [engine:junit-vintage]
+display-name: JUnit Vintage
+</system-out>
+</testsuite>

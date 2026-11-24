@@ -1,0 +1,218 @@
+[
+  {
+    "path": "app/src/main/java/com/retq/solitairebot/SolitaireApplication.kt",
+    "sha256": "b9b6d411d352afe4472392175bec590472bb5287eaed6cfb1af8a3503ece3836"
+  },
+  {
+    "path": "app/src/main/java/com/retq/solitairebot/capture/AutoBoardSetup.kt",
+    "sha256": "09ab7bf2cd7d71fa27173de80af62707bd9823414225f1c6e769ca25f62ec749"
+  },
+  {
+    "path": "app/src/main/java/com/retq/solitairebot/capture/AutomaticSetupGate.kt",
+    "sha256": "0868bb9b68d6738a8864c549d3138cced52df667d063d19beea0c116c8fe89ae"
+  },
+  {
+    "path": "app/src/main/java/com/retq/solitairebot/capture/BattleArenaPortraitProfile.kt",
+    "sha256": "a8dc86b8b632921c5800fe2ec514dc86844e1af5acec0ef445d7bfc7b07a3d61"
+  },
+  {
+    "path": "app/src/main/java/com/retq/solitairebot/capture/CaptureConfig.kt",
+    "sha256": "f780d8bb7a72bda61aa038536efcee420671a37d50a1b3e78ee81355f53b6a13"
+  },
+  {
+    "path": "app/src/main/java/com/retq/solitairebot/capture/CaptureRequestGate.kt",
+    "sha256": "0fa468d9543b3c5f8ee361911fbd092830615eac5052a91d240718d169f3c4e4"
+  },
+  {
+    "path": "app/src/main/java/com/retq/solitairebot/capture/FrameStampGate.kt",
+    "sha256": "09f587f140cdbb089ce0af29d74a9ecc7bcac312f38a14187241845815ddf651"
+  },
+  {
+    "path": "app/src/main/java/com/retq/solitairebot/capture/NormalizedBoardLayout.kt",
+    "sha256": "debb8e2b3fa15520929d253ce4c738c07a1255a21b625c633fa8317cdbdcb4e4"
+  },
+  {
+    "path": "app/src/main/java/com/retq/solitairebot/capture/RgbaFrameBuffer.kt",
+    "sha256": "6906ddbdfb86c206e0b810c79910141a05b1f22bea8e45303f558cff94b3c8aa"
+  },
+  {
+    "path": "app/src/main/java/com/retq/solitairebot/capture/RgbaPlanePacker.kt",
+    "sha256": "a3f7b5fb96abbe8725bdc3a77e66c25a4501aaa0c1b2fc25ab4be3f7253faf48"
+  },
+  {
+    "path": "app/src/main/java/com/retq/solitairebot/capture/ScreenCaptureService.kt",
+    "sha256": "7965a90fd9cc278cb18cdec8a5aae7302dcc408d1e1b30665365deade1cefb7d"
+  },
+  {
+    "path": "app/src/main/java/com/retq/solitairebot/control/ExecutionPacing.kt",
+    "sha256": "67a4d3271d7c980a75483f9c3ec488afa99c5370bf16f9f4a0be260f2dded4e4"
+  },
+  {
+    "path": "app/src/main/java/com/retq/solitairebot/control/FloatingControls.kt",
+    "sha256": "519de0936c6c12b26ca713b71d42faeba43fffd1223285f10cecd5fd9a8572cb"
+  },
+  {
+    "path": "app/src/main/java/com/retq/solitairebot/control/GestureAccessibilityService.kt",
+    "sha256": "66350bff1d47d3b37775ba123b08ad459228b81f7ccfd30a49744e733bb2bb6e"
+  },
+  {
+    "path": "app/src/main/java/com/retq/solitairebot/control/LivePipeline.kt",
+    "sha256": "db830262e80391dbf68e2cc61d41377813123dadc6e44eb75046c5e17c08bb42"
+  },
+  {
+    "path": "app/src/main/java/com/retq/solitairebot/control/LiveSession.kt",
+    "sha256": "16ed1a916b801b9cf263b50dba258d8fb086b95b80e66402dc6d61274090c829"
+  },
+  {
+    "path": "app/src/main/java/com/retq/solitairebot/control/MoveExecutor.kt",
+    "sha256": "839c1bb5c360ef152f0d27040df76ff26c88ab3449e88da3fbb861c92a35509b"
+  },
+  {
+    "path": "app/src/main/java/com/retq/solitairebot/control/OverlayPlacement.kt",
+    "sha256": "b4686e237385cc9d73cbf63c50989dc3a564bd096be35275219257888ac1a487"
+  },
+  {
+    "path": "app/src/main/java/com/retq/solitairebot/control/RoundDiagnostics.kt",
+    "sha256": "81b74e0cfda647f49c777ecf1ef21bcefa2201e939e06cc1278f9f4b4a1793c0"
+  },
+  {
+    "path": "app/src/main/java/com/retq/solitairebot/storage/AppStore.kt",
+    "sha256": "10b5962f1f40d483367d5df61c7d326fc037df8c8e01f1a16325837922bf6e48"
+  },
+  {
+    "path": "app/src/main/java/com/retq/solitairebot/storage/CaptureMonitorStore.kt",
+    "sha256": "eecfd866b3ebf962b94219830b79476bf4589240884463216f2ce5ad0bbd9572"
+  },
+  {
+    "path": "app/src/main/java/com/retq/solitairebot/storage/CaptureRoundState.kt",
+    "sha256": "ee6bc43dd512762aafe2cf43e761eb3c957d0c40f2b21bf06c1a6a1761aff173"
+  },
+  {
+    "path": "app/src/main/java/com/retq/solitairebot/storage/SnapshotProofPolicy.kt",
+    "sha256": "d5eff13a9798c6861b14322e178bc9c0d3e08fef76389fc5981a6ca9765b918a"
+  },
+  {
+    "path": "app/src/main/java/com/retq/solitairebot/ui/AsyncActivity.kt",
+    "sha256": "29c6ae5207673db9f2086460640d18f67f0544c21d1c8b62302a422b2f57709d"
+  },
+  {
+    "path": "app/src/main/java/com/retq/solitairebot/ui/BoardEditorActivity.kt",
+    "sha256": "fc00f1b8a04bb11e06467f64b36cae5402d5dd699c36fe30a1ba785c112b6c9b"
+  },
+  {
+    "path": "app/src/main/java/com/retq/solitairebot/ui/CalibrationActivity.kt",
+    "sha256": "b717715934f2ac05cc42f525bb61eaad243f9626993f67b829dfee2832ae17bc"
+  },
+  {
+    "path": "app/src/main/java/com/retq/solitairebot/ui/MainActivity.kt",
+    "sha256": "5033048c14fc6535195db9e666ed95d9154bb48589051e4838b4eac6f472f14f"
+  },
+  {
+    "path": "app/src/main/java/com/retq/solitairebot/ui/ScreenshotCanvas.kt",
+    "sha256": "39cca0eb010a355d377032ead2fe6ca6426f4553066be46c621b0f5ce849f2c6"
+  },
+  {
+    "path": "app/src/main/java/com/retq/solitairebot/ui/TrainingActivity.kt",
+    "sha256": "48f3faf2c11d9ed1b62eb873ed323076fbeea3f7060a9edab24050a0723a7fbe"
+  },
+  {
+    "path": "app/src/main/java/com/retq/solitairebot/ui/UiKit.kt",
+    "sha256": "ccfe4bc3c9dedfe4f45bc6613e24e2d2fd8a87bab6101dc7f45c238c88454ceb"
+  },
+  {
+    "path": "app/src/main/java/com/retq/solitairebot/vision/AutomaticRegionReader.kt",
+    "sha256": "0541b9653bc80957c537028631e05572c70ef2460343a10b4852b53005da974c"
+  },
+  {
+    "path": "app/src/main/java/com/retq/solitairebot/vision/BundledCardRecognizer.kt",
+    "sha256": "a76da841ee0d86fccc4e20c5eac54c884e94d56d978d0f5165d0ecf25bbc1737"
+  },
+  {
+    "path": "app/src/main/java/com/retq/solitairebot/vision/CardVision.kt",
+    "sha256": "9f5c85de97c7e5e409ba75b723eed16ab1bbc39a6919238ca7bd89c488143aed"
+  },
+  {
+    "path": "app/src/main/java/com/retq/solitairebot/vision/FramePixels.kt",
+    "sha256": "cd573019a36fc3a5493c34c1de1ee5f0c11536852c665cdb7d832a2f98b0aee1"
+  },
+  {
+    "path": "app/src/main/java/com/retq/solitairebot/vision/GlyphTemplates.kt",
+    "sha256": "6494b9aadbf1c0eff9fab9d0cfafc21b350528c610ad691366cce17e15e556d9"
+  },
+  {
+    "path": "app/src/main/java/com/retq/solitairebot/vision/GreenHudReader.kt",
+    "sha256": "ef2fcb461f7850146bafe39585e68711cbd903f6b66d0807b8061f97102df352"
+  },
+  {
+    "path": "core/src/main/kotlin/com/retq/solitairebot/core/AutoPlayGuard.kt",
+    "sha256": "d9554dd3c17eebb9f77101cc13fdf5e7ba6810334ec2c6dc6e8e0c8cfd009447"
+  },
+  {
+    "path": "core/src/main/kotlin/com/retq/solitairebot/core/BoardState.kt",
+    "sha256": "4ece5754effb65ad2f39443029b8727c252e4e27feaed9e95e73a7699a235efd"
+  },
+  {
+    "path": "core/src/main/kotlin/com/retq/solitairebot/core/BoardText.kt",
+    "sha256": "7ff4a5e7753c303d89ded8251a2a4f64336a73cb621b5622cd19da28267d3f30"
+  },
+  {
+    "path": "core/src/main/kotlin/com/retq/solitairebot/core/Card.kt",
+    "sha256": "16c2406dec0dec723c31d5d8453f4ff86f268ddd7814c77e7f66037d53cc806e"
+  },
+  {
+    "path": "core/src/main/kotlin/com/retq/solitairebot/core/DeckKnowledge.kt",
+    "sha256": "376c9b3fbca0f831e06200a3c226fcdfa21bb06b5d379b93ac2764ef7ca1aa26"
+  },
+  {
+    "path": "core/src/main/kotlin/com/retq/solitairebot/core/EndgamePlanner.kt",
+    "sha256": "ca8a13790a85a745a632d1e782996c99caae7bfc75586d1c8fed577bfca875a4"
+  },
+  {
+    "path": "core/src/main/kotlin/com/retq/solitairebot/core/HudClockTracker.kt",
+    "sha256": "22623691ad67c94e2d09e6403b1e0f28c53c25fc667f411e2ccb6f624754dcd4"
+  },
+  {
+    "path": "core/src/main/kotlin/com/retq/solitairebot/core/MoveSimulator.kt",
+    "sha256": "893a53b8b6c00d89c687f307825b1b372ba813bebc99e8c563bc81a0b000eb6e"
+  },
+  {
+    "path": "core/src/main/kotlin/com/retq/solitairebot/core/Moves.kt",
+    "sha256": "6ea2c297e002d439048ec12bc692e9a13b79abf2d7a80204b5649a4fd9ea8c81"
+  },
+  {
+    "path": "core/src/main/kotlin/com/retq/solitairebot/core/ObservationEvidence.kt",
+    "sha256": "81032c6cc485eceff412a63bbc5267a7bf950c9a70d95ec8ae6ac25a96a0ba42"
+  },
+  {
+    "path": "core/src/main/kotlin/com/retq/solitairebot/core/RoundScoreLedger.kt",
+    "sha256": "4db04740076746a76151d12b2abc7f8d8053afdd27a75ee2816ab1222147fdba"
+  },
+  {
+    "path": "core/src/main/kotlin/com/retq/solitairebot/core/SessionTimer.kt",
+    "sha256": "eff362798dbec2e032f404872042332b0a60c8e09d97c6107a5bd3cf3a372848"
+  },
+  {
+    "path": "core/src/main/kotlin/com/retq/solitairebot/core/SmartDecision.kt",
+    "sha256": "ca9ec5b6e5df8fe827f3ba6c08217b821addc7436de0c8c9a027d1033247d8b8"
+  },
+  {
+    "path": "core/src/main/kotlin/com/retq/solitairebot/core/Solver.kt",
+    "sha256": "3423f3fad1ca31d20cd5f98c95b201ee19583f420a6f0980598a1af1e367c577"
+  },
+  {
+    "path": "core/src/main/kotlin/com/retq/solitairebot/core/StockPassMemory.kt",
+    "sha256": "d93108d09b1a0371819d42440f63b9ed208b93913be050f34283575d240f5788"
+  },
+  {
+    "path": "core/src/main/kotlin/com/retq/solitairebot/core/StockTracker.kt",
+    "sha256": "4369b5c7ae6fa52f495b37846d1ac90a20f1e91037033433bcb71d024afbc667"
+  },
+  {
+    "path": "core/src/main/kotlin/com/retq/solitairebot/core/TacticalBeamPlanner.kt",
+    "sha256": "e1e7779f7ad8756ea897d08eb52eb7296b8054ed379876afe23b245c55a78f70"
+  },
+  {
+    "path": "core/src/main/kotlin/com/retq/solitairebot/core/VisualSafety.kt",
+    "sha256": "5fd2458b77947f101cd18401e6825a782871ed11aae717a77f30a496281c098d"
+  }
+]

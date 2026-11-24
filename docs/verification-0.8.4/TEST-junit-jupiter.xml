@@ -1,0 +1,307 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="JUnit Jupiter" tests="50" skipped="0" failures="0" errors="0" time="0.235" hostname="11f31e661961" timestamp="2026-11-21T04:45:37">
+<testcase name="duplicateFoundationEntryIsRejected()" classname="com.retq.solitairebot.core.BoardValidationAndStrategyTest" time="0">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.retq.solitairebot.core.BoardValidationAndStrategyTest]/[method:duplicateFoundationEntryIsRejected()]
+display-name: duplicateFoundationEntryIsRejected()
+</system-out>
+</testcase>
+<testcase name="parseCardsAndRejectBadInput()" classname="com.retq.solitairebot.core.CoreRulesTest" time="0.014">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.retq.solitairebot.core.CoreRulesTest]/[method:parseCardsAndRejectBadInput()]
+display-name: parseCardsAndRejectBadInput()
+</system-out>
+</testcase>
+<testcase name="recoveryFromFoundationRemainsSelectable()" classname="com.retq.solitairebot.core.BoardValidationAndStrategyTest" time="0.001">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.retq.solitairebot.core.BoardValidationAndStrategyTest]/[method:recoveryFromFoundationRemainsSelectable()]
+display-name: recoveryFromFoundationRemainsSelectable()
+</system-out>
+</testcase>
+<testcase name="neverTreatUnobservedAsEmpty()" classname="com.retq.solitairebot.core.CoreRulesTest" time="0.001">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.retq.solitairebot.core.CoreRulesTest]/[method:neverTreatUnobservedAsEmpty()]
+display-name: neverTreatUnobservedAsEmpty()
+</system-out>
+</testcase>
+<testcase name="simulatedFlipNeverInventsHiddenCardOrAnEmptyColumn()" classname="com.retq.solitairebot.core.AutomaticStockAndFlipTest" time="0">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.retq.solitairebot.core.AutomaticStockAndFlipTest]/[method:simulatedFlipNeverInventsHiddenCardOrAnEmptyColumn()]
+display-name: simulatedFlipNeverInventsHiddenCardOrAnEmptyColumn()
+</system-out>
+</testcase>
+<testcase name="unknownRedealsNeverAutoRecycle()" classname="com.retq.solitairebot.core.CoreRulesTest" time="0.001">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.retq.solitairebot.core.CoreRulesTest]/[method:unknownRedealsNeverAutoRecycle()]
+display-name: unknownRedealsNeverAutoRecycle()
+</system-out>
+</testcase>
+<testcase name="will not repeat the same move against unchanged board()" classname="com.retq.solitairebot.core.AutoPlayGuardTest" time="0">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.retq.solitairebot.core.AutoPlayGuardTest]/[method:will not repeat the same move against unchanged board()]
+display-name: will not repeat the same move against unchanged board()
+</system-out>
+</testcase>
+<testcase name="legalDrawUsesConfiguredVariantAndRejectsUnsupportedCount()" classname="com.retq.solitairebot.core.AutomaticStockAndFlipTest" time="0">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.retq.solitairebot.core.AutomaticStockAndFlipTest]/[method:legalDrawUsesConfiguredVariantAndRejectsUnsupportedCount()]
+display-name: legalDrawUsesConfiguredVariantAndRejectsUnsupportedCount()
+</system-out>
+</testcase>
+<testcase name="moveAlternatingDescendingRunAndSimulate()" classname="com.retq.solitairebot.core.CoreRulesTest" time="0.003">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.retq.solitairebot.core.CoreRulesTest]/[method:moveAlternatingDescendingRunAndSimulate()]
+display-name: moveAlternatingDescendingRunAndSimulate()
+</system-out>
+</testcase>
+<testcase name="unreadableSourceIsNotProofOfRemoval()" classname="com.retq.solitairebot.core.VisualSafetyTest" time="0">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.retq.solitairebot.core.VisualSafetyTest]/[method:unreadableSourceIsNotProofOfRemoval()]
+display-name: unreadableSourceIsNotProofOfRemoval()
+</system-out>
+</testcase>
+<testcase name="changedDeeperRunIsNotStable()" classname="com.retq.solitairebot.core.VisualSafetyTest" time="0">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.retq.solitairebot.core.VisualSafetyTest]/[method:changedDeeperRunIsNotStable()]
+display-name: changedDeeperRunIsNotStable()
+</system-out>
+</testcase>
+<testcase name="rollbackOfAnAceCanBeVerifiedWithAnEmptyFoundation()" classname="com.retq.solitairebot.core.VisualSafetyTest" time="0">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.retq.solitairebot.core.VisualSafetyTest]/[method:rollbackOfAnAceCanBeVerifiedWithAnEmptyFoundation()]
+display-name: rollbackOfAnAceCanBeVerifiedWithAnEmptyFoundation()
+</system-out>
+</testcase>
+<testcase name="drawOneRequiresFreshRecognizedWasteAndStockProof()" classname="com.retq.solitairebot.core.AutomaticStockAndFlipTest" time="0.003">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.retq.solitairebot.core.AutomaticStockAndFlipTest]/[method:drawOneRequiresFreshRecognizedWasteAndStockProof()]
+display-name: drawOneRequiresFreshRecognizedWasteAndStockProof()
+</system-out>
+</testcase>
+<testcase name="duplicateVisibleCardsRefuseMoves()" classname="com.retq.solitairebot.core.CoreRulesTest" time="0.001">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.retq.solitairebot.core.CoreRulesTest]/[method:duplicateVisibleCardsRefuseMoves()]
+display-name: duplicateVisibleCardsRefuseMoves()
+</system-out>
+</testcase>
+<testcase name="clockIsMonotonicAndStopsAtFiveMinutes()" classname="com.retq.solitairebot.core.CoreRulesTest" time="0.001">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.retq.solitairebot.core.CoreRulesTest]/[method:clockIsMonotonicAndStopsAtFiveMinutes()]
+display-name: clockIsMonotonicAndStopsAtFiveMinutes()
+</system-out>
+</testcase>
+<testcase name="wasteMoveRequiresNewDestinationAndChangedWaste()" classname="com.retq.solitairebot.core.VisualSafetyTest" time="0.001">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.retq.solitairebot.core.VisualSafetyTest]/[method:wasteMoveRequiresNewDestinationAndChangedWaste()]
+display-name: wasteMoveRequiresNewDestinationAndChangedWaste()
+</system-out>
+</testcase>
+<testcase name="repeatedObservationIsStable()" classname="com.retq.solitairebot.core.VisualSafetyTest" time="0.001">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.retq.solitairebot.core.VisualSafetyTest]/[method:repeatedObservationIsStable()]
+display-name: repeatedObservationIsStable()
+</system-out>
+</testcase>
+<testcase name="requiresObservedFoundationAndSourceChange()" classname="com.retq.solitairebot.core.VisualSafetyTest" time="0">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.retq.solitairebot.core.VisualSafetyTest]/[method:requiresObservedFoundationAndSourceChange()]
+display-name: requiresObservedFoundationAndSourceChange()
+</system-out>
+</testcase>
+<testcase name="scorePrefersUncoverAndAvoidsLoop()" classname="com.retq.solitairebot.core.CoreRulesTest" time="0.014">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.retq.solitairebot.core.CoreRulesTest]/[method:scorePrefersUncoverAndAvoidsLoop()]
+display-name: scorePrefersUncoverAndAvoidsLoop()
+</system-out>
+</testcase>
+<testcase name="repeatStockCycleAndFailedFlipCannotBeRetriedByRestarting()" classname="com.retq.solitairebot.core.AutomaticStockAndFlipTest" time="0.008">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.retq.solitairebot.core.AutomaticStockAndFlipTest]/[method:repeatStockCycleAndFailedFlipCannotBeRetriedByRestarting()]
+display-name: repeatStockCycleAndFailedFlipCannotBeRetriedByRestarting()
+</system-out>
+</testcase>
+<testcase name="findAcesAndDrawThree()" classname="com.retq.solitairebot.core.CoreRulesTest" time="0.086">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.retq.solitairebot.core.CoreRulesTest]/[method:findAcesAndDrawThree()]
+display-name: findAcesAndDrawThree()
+</system-out>
+</testcase>
+<testcase name="failure immediately stops autoplay()" classname="com.retq.solitairebot.core.AutoPlayGuardTest" time="0">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.retq.solitairebot.core.AutoPlayGuardTest]/[method:failure immediately stops autoplay()]
+display-name: failure immediately stops autoplay()
+</system-out>
+</testcase>
+<testcase name="movingLastFaceUpCardMayRevealBackThenFlipIt()" classname="com.retq.solitairebot.core.AutomaticStockAndFlipTest" time="0.001">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.retq.solitairebot.core.AutomaticStockAndFlipTest]/[method:movingLastFaceUpCardMayRevealBackThenFlipIt()]
+display-name: movingLastFaceUpCardMayRevealBackThenFlipIt()
+</system-out>
+</testcase>
+<testcase name="onlyVisuallyVerifiableStockChanges()" classname="com.retq.solitairebot.core.VisualSafetyTest" time="0.001">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.retq.solitairebot.core.VisualSafetyTest]/[method:onlyVisuallyVerifiableStockChanges()]
+display-name: onlyVisuallyVerifiableStockChanges()
+</system-out>
+</testcase>
+<testcase name="verifiesEveryCardInAMultiCardRun()" classname="com.retq.solitairebot.core.VisualSafetyTest" time="0.001">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.retq.solitairebot.core.VisualSafetyTest]/[method:verifiesEveryCardInAMultiCardRun()]
+display-name: verifiesEveryCardInAMultiCardRun()
+</system-out>
+</testcase>
+<testcase name="hiddenPileCannotDisappearDuringOneCardTransfer()" classname="com.retq.solitairebot.core.AutomaticStockAndFlipTest" time="0.001">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.retq.solitairebot.core.AutomaticStockAndFlipTest]/[method:hiddenPileCannotDisappearDuringOneCardTransfer()]
+display-name: hiddenPileCannotDisappearDuringOneCardTransfer()
+</system-out>
+</testcase>
+<testcase name="unknownRedealsNeedPositiveRecycleControlAndVisibleWaste()" classname="com.retq.solitairebot.core.AutomaticStockAndFlipTest" time="0">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.retq.solitairebot.core.AutomaticStockAndFlipTest]/[method:unknownRedealsNeedPositiveRecycleControlAndVisibleWaste()]
+display-name: unknownRedealsNeedPositiveRecycleControlAndVisibleWaste()
+</system-out>
+</testcase>
+<testcase name="recycleRequiresPositiveStockAndWasteEmptyProof()" classname="com.retq.solitairebot.core.VisualSafetyTest" time="0.004">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.retq.solitairebot.core.VisualSafetyTest]/[method:recycleRequiresPositiveStockAndWasteEmptyProof()]
+display-name: recycleRequiresPositiveStockAndWasteEmptyProof()
+</system-out>
+</testcase>
+<testcase name="foundationsCannotContainVisibleDuplicates()" classname="com.retq.solitairebot.core.CoreRulesTest" time="0">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.retq.solitairebot.core.CoreRulesTest]/[method:foundationsCannotContainVisibleDuplicates()]
+display-name: foundationsCannotContainVisibleDuplicates()
+</system-out>
+</testcase>
+<testcase name="drawOneChangesOnlyOneStockCardAndPreservesRecyclingOrder()" classname="com.retq.solitairebot.core.AutomaticStockAndFlipTest" time="0">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.retq.solitairebot.core.AutomaticStockAndFlipTest]/[method:drawOneChangesOnlyOneStockCardAndPreservesRecyclingOrder()]
+display-name: drawOneChangesOnlyOneStockCardAndPreservesRecyclingOrder()
+</system-out>
+</testcase>
+<testcase name="drawThreeLastPacketCanContainFewerThanThree()" classname="com.retq.solitairebot.core.AutomaticStockAndFlipTest" time="0">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.retq.solitairebot.core.AutomaticStockAndFlipTest]/[method:drawThreeLastPacketCanContainFewerThanThree()]
+display-name: drawThreeLastPacketCanContainFewerThanThree()
+</system-out>
+</testcase>
+<testcase name="solverPrefersRevealAndLargerHiddenPileBeforeDrawing()" classname="com.retq.solitairebot.core.AutomaticStockAndFlipTest" time="0.001">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.retq.solitairebot.core.AutomaticStockAndFlipTest]/[method:solverPrefersRevealAndLargerHiddenPileBeforeDrawing()]
+display-name: solverPrefersRevealAndLargerHiddenPileBeforeDrawing()
+</system-out>
+</testcase>
+<testcase name="exposedBackCannotServeAsEmptyKingDestinationAndRoundTripsEditor()" classname="com.retq.solitairebot.core.AutomaticStockAndFlipTest" time="0">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.retq.solitairebot.core.AutomaticStockAndFlipTest]/[method:exposedBackCannotServeAsEmptyKingDestinationAndRoundTripsEditor()]
+display-name: exposedBackCannotServeAsEmptyKingDestinationAndRoundTripsEditor()
+</system-out>
+</testcase>
+<testcase name="boundedStrategyPrefersExposingKnownHiddenCard()" classname="com.retq.solitairebot.core.BoardValidationAndStrategyTest" time="0">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.retq.solitairebot.core.BoardValidationAndStrategyTest]/[method:boundedStrategyPrefersExposingKnownHiddenCard()]
+display-name: boundedStrategyPrefersExposingKnownHiddenCard()
+</system-out>
+</testcase>
+<testcase name="restart preserves attempted and failed edges()" classname="com.retq.solitairebot.core.AutoPlayGuardTest" time="0">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.retq.solitairebot.core.AutoPlayGuardTest]/[method:restart preserves attempted and failed edges()]
+display-name: restart preserves attempted and failed edges()
+</system-out>
+</testcase>
+<testcase name="new capture explicitly clears history()" classname="com.retq.solitairebot.core.AutoPlayGuardTest" time="0">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.retq.solitairebot.core.AutoPlayGuardTest]/[method:new capture explicitly clears history()]
+display-name: new capture explicitly clears history()
+</system-out>
+</testcase>
+<testcase name="combinedKnownCardTotalCannotExceedDeck()" classname="com.retq.solitairebot.core.BoardValidationAndStrategyTest" time="0">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.retq.solitairebot.core.BoardValidationAndStrategyTest]/[method:combinedKnownCardTotalCannotExceedDeck()]
+display-name: combinedKnownCardTotalCannotExceedDeck()
+</system-out>
+</testcase>
+<testcase name="flipRequiresBothPositiveBackAndNewlyRecognizedCard()" classname="com.retq.solitairebot.core.AutomaticStockAndFlipTest" time="0">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.retq.solitairebot.core.AutomaticStockAndFlipTest]/[method:flipRequiresBothPositiveBackAndNewlyRecognizedCard()]
+display-name: flipRequiresBothPositiveBackAndNewlyRecognizedCard()
+</system-out>
+</testcase>
+<testcase name="wasteAndFoundationRules()" classname="com.retq.solitairebot.core.CoreRulesTest" time="0.003">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.retq.solitairebot.core.CoreRulesTest]/[method:wasteAndFoundationRules()]
+display-name: wasteAndFoundationRules()
+</system-out>
+</testcase>
+<testcase name="drawThreeStockAndRecyclePreserveOrder()" classname="com.retq.solitairebot.core.CoreRulesTest" time="0.001">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.retq.solitairebot.core.CoreRulesTest]/[method:drawThreeStockAndRecyclePreserveOrder()]
+display-name: drawThreeStockAndRecyclePreserveOrder()
+</system-out>
+</testcase>
+<testcase name="positiveObservedRevealCanConfirmFoundationMove()" classname="com.retq.solitairebot.core.VisualSafetyTest" time="0">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.retq.solitairebot.core.VisualSafetyTest]/[method:positiveObservedRevealCanConfirmFoundationMove()]
+display-name: positiveObservedRevealCanConfirmFoundationMove()
+</system-out>
+</testcase>
+<testcase name="hiddenCountCannotExceedSingleDeck()" classname="com.retq.solitairebot.core.BoardValidationAndStrategyTest" time="0">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.retq.solitairebot.core.BoardValidationAndStrategyTest]/[method:hiddenCountCannotExceedSingleDeck()]
+display-name: hiddenCountCannotExceedSingleDeck()
+</system-out>
+</testcase>
+<testcase name="unknown hidden counts cannot bypass attempted state key()" classname="com.retq.solitairebot.core.AutoPlayGuardTest" time="0">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.retq.solitairebot.core.AutoPlayGuardTest]/[method:unknown hidden counts cannot bypass attempted state key()]
+display-name: unknown hidden counts cannot bypass attempted state key()
+</system-out>
+</testcase>
+<testcase name="hard cap prevents endless sessions()" classname="com.retq.solitairebot.core.AutoPlayGuardTest" time="0">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.retq.solitairebot.core.AutoPlayGuardTest]/[method:hard cap prevents endless sessions()]
+display-name: hard cap prevents endless sessions()
+</system-out>
+</testcase>
+<testcase name="unexplainedOtherColumnChangeRejectsSuccess()" classname="com.retq.solitairebot.core.VisualSafetyTest" time="0.005">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.retq.solitairebot.core.VisualSafetyTest]/[method:unexplainedOtherColumnChangeRejectsSuccess()]
+display-name: unexplainedOtherColumnChangeRejectsSuccess()
+</system-out>
+</testcase>
+<testcase name="visuallyAvailableRecycleStillNeedsConfirmedPhysicalTransition()" classname="com.retq.solitairebot.core.AutomaticStockAndFlipTest" time="0">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.retq.solitairebot.core.AutomaticStockAndFlipTest]/[method:visuallyAvailableRecycleStillNeedsConfirmedPhysicalTransition()]
+display-name: visuallyAvailableRecycleStillNeedsConfirmedPhysicalTransition()
+</system-out>
+</testcase>
+<testcase name="manual dispatch shares failed move memory()" classname="com.retq.solitairebot.core.AutoPlayGuardTest" time="0">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.retq.solitairebot.core.AutoPlayGuardTest]/[method:manual dispatch shares failed move memory()]
+display-name: manual dispatch shares failed move memory()
+</system-out>
+</testcase>
+<testcase name="timeUrgencyIsUsedWithoutChangingMoveLegality()" classname="com.retq.solitairebot.core.BoardValidationAndStrategyTest" time="0.001">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.retq.solitairebot.core.BoardValidationAndStrategyTest]/[method:timeUrgencyIsUsedWithoutChangingMoveLegality()]
+display-name: timeUrgencyIsUsedWithoutChangingMoveLegality()
+</system-out>
+</testcase>
+<testcase name="unreadableColumnDoesNotBecomeAFlipCandidate()" classname="com.retq.solitairebot.core.AutomaticStockAndFlipTest" time="0">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.retq.solitairebot.core.AutomaticStockAndFlipTest]/[method:unreadableColumnDoesNotBecomeAFlipCandidate()]
+display-name: unreadableColumnDoesNotBecomeAFlipCandidate()
+</system-out>
+</testcase>
+<testcase name="requires an explicit start()" classname="com.retq.solitairebot.core.AutoPlayGuardTest" time="0">
+<system-out>
+unique-id: [engine:junit-jupiter]/[class:com.retq.solitairebot.core.AutoPlayGuardTest]/[method:requires an explicit start()]
+display-name: requires an explicit start()
+</system-out>
+</testcase>
+<system-out>
+unique-id: [engine:junit-jupiter]
+display-name: JUnit Jupiter
+</system-out>
+</testsuite>

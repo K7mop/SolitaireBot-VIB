@@ -1,0 +1,27 @@
+PASS 1: assistant overlay event preserves game foreground and window revision
+PASS 2: real assistant activity invalidates foreground game when visible
+PASS 3: unrelated app window takes over foreground and blocks game gestures
+PASS 4: verified move waits for cooldown, resets failure streak and dispatches next move
+PASS 5: stop invalidates queued touch before accessibility dispatch
+PASS 6: late callback cannot complete or cancel another action
+PASS 7: missing callback is blacklisted; automatic mode keeps watching without repeating a failed move
+PASS 8: verification timeout updates status then keeps observing without repeating failed move
+PASS 9: guard stop restores overlay and restart retains the attempted edge
+PASS 10: manual mode reacquires frames, sends exactly one move and restores after verification
+PASS 11: same-package dialog window invalidates queued gesture
+PASS 12: legacy trained glyphs with zero card-example counter remain usable for read-only mode
+PASS 13: stock actions require positive confident waste evidence; known empty waste permits draw
+PASS 14: flip tap needs a positive back, confident region and finite point strictly inside that column
+PASS 15: moving back points cannot satisfy two-frame stability or authorize a queued stale flip tap
+PASS 16: new card coordinates invalidate queued touch even when all recognized card identities are unchanged
+PASS 17: stock uses configured draw variant; unknown redeals require a positively seen recycle control
+PASS 18: three failed touches quarantine an unchanged board; a different stable board resumes safely
+PASS 19: manual one-move mode stops on failure and never enters automatic recovery
+PASS 20: late callback from timed-out gesture cannot complete the different recovery action
+PASS 21: an unreadable board pauses touch safely without ending timed monitoring
+PASS 22: late vision publication after stop or capture replacement cannot publish or dispatch after restart
+PASS 23: unidentified visible waste allows a verified draw, never a blind or identical-image draw
+PASS 24: no current legal move parks monitoring; it does not terminate the timed round
+PASS 25: waste visual fingerprint must stabilize across two frames before any gesture
+PASS 26: recycle requires confirmed stock arrow and occupied waste, then a verified reset
+ALL 26 production-control regression scenarios passed

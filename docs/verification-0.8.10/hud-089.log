@@ -1,0 +1,3 @@
+Score=240 time=227 confidence=0.7837838
+PASS: green HUD source path decodes score and timer in a synthetic image
+PASS: malformed seconds >=60 do not become a trusted clock

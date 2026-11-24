@@ -1,0 +1,118 @@
+╷
+├─ JUnit Platform Suite ✔
+├─ JUnit Jupiter ✔
+│  ├─ CoreRulesTest ✔
+│  │  ├─ findAcesAndDrawThree() ✔
+│  │  ├─ clockIsMonotonicAndStopsAtFiveMinutes() ✔
+│  │  ├─ moveAlternatingDescendingRunAndSimulate() ✔
+│  │  ├─ wasteAndFoundationRules() ✔
+│  │  ├─ parseCardsAndRejectBadInput() ✔
+│  │  ├─ duplicateVisibleCardsRefuseMoves() ✔
+│  │  ├─ drawThreeStockAndRecyclePreserveOrder() ✔
+│  │  ├─ scorePrefersUncoverAndAvoidsLoop() ✔
+│  │  ├─ unknownRedealsNeverAutoRecycle() ✔
+│  │  ├─ foundationsCannotContainVisibleDuplicates() ✔
+│  │  └─ neverTreatUnobservedAsEmpty() ✔
+│  ├─ AutomaticStockAndFlipTest ✔
+│  │  ├─ repeatStockCycleAndFailedFlipCannotBeRetriedByRestarting() ✔
+│  │  ├─ drawOneRequiresFreshRecognizedWasteAndStockProof() ✔
+│  │  ├─ unknownRedealsNeedPositiveRecycleControlAndVisibleWaste() ✔
+│  │  ├─ drawThreeLastPacketCanContainFewerThanThree() ✔
+│  │  ├─ drawOneChangesOnlyOneStockCardAndPreservesRecyclingOrder() ✔
+│  │  ├─ hiddenPileCannotDisappearDuringOneCardTransfer() ✔
+│  │  ├─ movingLastFaceUpCardMayRevealBackThenFlipIt() ✔
+│  │  ├─ flipRequiresBothPositiveBackAndNewlyRecognizedCard() ✔
+│  │  ├─ legalDrawUsesConfiguredVariantAndRejectsUnsupportedCount() ✔
+│  │  ├─ simulatedFlipNeverInventsHiddenCardOrAnEmptyColumn() ✔
+│  │  ├─ exposedBackCannotServeAsEmptyKingDestinationAndRoundTripsEditor() ✔
+│  │  ├─ visuallyAvailableRecycleStillNeedsConfirmedPhysicalTransition() ✔
+│  │  ├─ solverPrefersRevealAndLargerHiddenPileBeforeDrawing() ✔
+│  │  └─ unreadableColumnDoesNotBecomeAFlipCandidate() ✔
+│  ├─ BoardValidationAndStrategyTest ✔
+│  │  ├─ duplicateFoundationEntryIsRejected() ✔
+│  │  ├─ timeUrgencyIsUsedWithoutChangingMoveLegality() ✔
+│  │  ├─ pointlessFoundationRollbackIsNotSelected() ✔
+│  │  ├─ boundedStrategyPrefersExposingKnownHiddenCard() ✔
+│  │  ├─ hiddenCountCannotExceedSingleDeck() ✔
+│  │  ├─ combinedKnownCardTotalCannotExceedDeck() ✔
+│  │  └─ usefulFoundationRollbackUnlocksARealHiddenPile() ✔
+│  ├─ AutoPlayGuardTest ✔
+│  │  ├─ manual dispatch shares failed move memory() ✔
+│  │  ├─ unknown hidden counts cannot bypass attempted state key() ✔
+│  │  ├─ restart preserves attempted and failed edges() ✔
+│  │  ├─ will not repeat the same move against unchanged board() ✔
+│  │  ├─ failure immediately stops autoplay() ✔
+│  │  ├─ new capture explicitly clears history() ✔
+│  │  ├─ hard cap prevents endless sessions() ✔
+│  │  └─ requires an explicit start() ✔
+│  └─ VisualSafetyTest ✔
+│     ├─ wasteMoveRequiresNewDestinationAndChangedWaste() ✔
+│     ├─ unexplainedOtherColumnChangeRejectsSuccess() ✔
+│     ├─ repeatedObservationIsStable() ✔
+│     ├─ onlyVisuallyVerifiableStockChanges() ✔
+│     ├─ unreadableSourceIsNotProofOfRemoval() ✔
+│     ├─ rollbackOfAnAceCanBeVerifiedWithAnEmptyFoundation() ✔
+│     ├─ requiresObservedFoundationAndSourceChange() ✔
+│     ├─ positiveObservedRevealCanConfirmFoundationMove() ✔
+│     ├─ changedDeeperRunIsNotStable() ✔
+│     ├─ recycleRequiresPositiveStockAndWasteEmptyProof() ✔
+│     └─ verifiesEveryCardInAMultiCardRun() ✔
+└─ JUnit Vintage ✔
+   ├─ LiveSessionTest ✔
+   │  ├─ verification requires two independent post delivery frames ✔
+   │  ├─ old frame cannot be relabelled fresh by OCR completion ✔
+   │  ├─ post action verification also requires both frames within freshness budget ✔
+   │  ├─ verification checks endpoint confidence not board average ✔
+   │  ├─ other capture generation is ignored ✔
+   │  ├─ cancel invalidates queued dispatch ✔
+   │  ├─ late callback cannot change a newer pending action ✔
+   │  ├─ fresh frame cannot pair with an expired earlier observation ✔
+   │  ├─ verification timeout is a single terminal event ✔
+   │  └─ queued action has a deadline even without a gesture callback ✔
+   ├─ FrameStampGateTest ✔
+   │  ├─ newReaderHasIndependentClockSequence ✔
+   │  └─ duplicatedAndOutOfOrderFramesCannotCountAsFreshEvidence ✔
+   ├─ CaptureRoundStateTest ✔
+   │  ├─ anOldFrameCannotBeBoundToANewRound ✔
+   │  ├─ roundCannotStartWithoutAnActiveCapture ✔
+   │  ├─ captureAndProcessRecreationNeverStartTheRound ✔
+   │  └─ resizePreservesTheOriginalDeadlineButNewCaptureDoesNot ✔
+   ├─ AutomaticSetupGateTest ✔
+   │  ├─ stoppedRecognitionCannotRestartAutomaticPlay ✔
+   │  ├─ cancelledTokenDoesNotReviveWhenRequestNumberIsReused ✔
+   │  ├─ newScreenshotSupersedesOldRecognition ✔
+   │  ├─ captureResizeInvalidatesOldCoordinates ✔
+   │  ├─ automaticStartIsDeliveredOnlyOnce ✔
+   │  └─ oldSaveCannotAcquireNewSetupRequest ✔
+   ├─ OverlayPlacementTest ✔
+   │  ├─ bottomSpaceUsedWhenTopIsOccupied ✔
+   │  ├─ impossibleSpaceIsRejectedInsteadOfCoveringCards ✔
+   │  └─ stopButtonRemainsOutsideBoardAndSystemInsets ✔
+   ├─ CaptureRequestGateTest ✔
+   │  ├─ obscuredContentAndFutureFrameTimestampsAreRejected ✔
+   │  ├─ missingFramesExpireOnceAfterFifteenSeconds ✔
+   │  ├─ lateOverlayHideExtendsDelayBeyondNotificationCountdown ✔
+   │  ├─ overlayMustBeHiddenAndItsFramesDrainedFirst ✔
+   │  ├─ notificationWaitsThreeSecondsAndRequiresNewFrame ✔
+   │  ├─ clockRollbackAndPreRequestHideAreRejected ✔
+   │  ├─ staleCallbacksCannotAffectReplacementRequest ✔
+   │  └─ cancelledRequestCannotSaveOrBeResurrected ✔
+   └─ SnapshotProofPolicyTest ✔
+      ├─ expiredAndFutureImagesCannotArmCalibration ✔
+      ├─ exactSnapshotAndActiveCaptureAreRequired ✔
+      └─ malformedOrOverflowingTimesAndBlankIdentityAreRejected ✔
+
+Test run finished after 304 ms
+[        15 containers found      ]
+[         0 containers skipped    ]
+[        15 containers started    ]
+[         0 containers aborted    ]
+[        15 containers successful ]
+[         0 containers failed     ]
+[        87 tests found           ]
+[         0 tests skipped         ]
+[        87 tests started         ]
+[         0 tests aborted         ]
+[        87 tests successful      ]
+[         0 tests failed          ]
+

@@ -1,0 +1,23 @@
+Detected geometry: Geometry(columns=[PixelBox(left=20, top=650, right=134, bottom=805), PixelBox(left=147, top=670, right=261, bottom=825), PixelBox(left=274, top=690, right=388, bottom=845), PixelBox(left=401, top=710, right=515, bottom=865), PixelBox(left=528, top=730, right=642, bottom=885), PixelBox(left=655, top=750, right=769, bottom=905), PixelBox(left=782, top=770, right=896, bottom=925)], width=114, height=155, tableauTop=650, gap=13)
+PASS seven columns and card dimensions derived from pixels
+Detection(layout=NormalizedBoardLayout(stock=NormalizedBox(left=0.85, top=0.24324325, right=0.973913, bottom=0.32702702), waste=NormalizedBox(left=0.57391304, top=0.24324325, right=0.83586955, bottom=0.32702702), foundations=[NormalizedBox(left=0.02173913, top=0.24324325, right=0.14565217, bottom=0.32702702), NormalizedBox(left=0.1597826, top=0.24324325, right=0.28369564, bottom=0.32702702), NormalizedBox(left=0.29782608, top=0.24324325, right=0.42173913, bottom=0.32702702), NormalizedBox(left=0.43586957, top=0.24324325, right=0.5597826, bottom=0.32702702)], tableauColumns=[NormalizedBox(left=0.02173913, top=0.35135135, right=0.14565217, bottom=0.94), NormalizedBox(left=0.1597826, top=0.35135135, right=0.28369564, bottom=0.94), NormalizedBox(left=0.29782608, top=0.35135135, right=0.42173913, bottom=0.94), NormalizedBox(left=0.43586957, top=0.35135135, right=0.5597826, bottom=0.94), NormalizedBox(left=0.57391304, top=0.35135135, right=0.6978261, bottom=0.94), NormalizedBox(left=0.7119565, top=0.35135135, right=0.83586955, bottom=0.94), NormalizedBox(left=0.85, top=0.35135135, right=0.973913, bottom=0.94)]), message=حُددت المناطق الـ 13 من الصورة وعُرف ترتيب رموز الأساسات تلقائيًا, columnsFound=7, foundationSuitsFound=4)
+PASS all thirteen regions and four foundation suits detected
+الأعمدة: 1:AS | 2:KD | 3:QC | 4:JH | 5:TC | 6:9D | 7:8S | السحب: فارغ | أوراق مقروءة: 7 | مناطق غير مؤكدة: 0
+[]
+PASS first image populates visible cards and positive empty/back states without teaching
+الأعمدة: 1:فارغ | 2:KD | 3:QC | 4:JH | 5:TC | 6:9D | 7:8S | السحب: فارغ | أوراق مقروءة: 7 | مناطق غير مؤكدة: 0
+[]
+PASS a real visual transition verifies foundation move and newly empty column
+PASS matched exposed back yields a flip target without invented card identity
+PASS fresh recognized face verifies successful flip
+PASS stock tap is verified by changed top waste card
+PASS positive circular-arrow affordance enables bounded recycling
+PASS an unreadable stock is not silently treated as empty
+PASS a new session loses initial-image evidence until rebound
+PASS footer controls excluded from column search regions
+PASS geometry scales with full capture resolution
+PASS pale placeholders require blank index corners; Draw 1 retained
+PASS foundation coordinates are reordered from observed suit icons
+PASS blank, occluded, truncated and unlabelled layouts reject auto setup
+PASS ambiguous touches revoke hidden-count and redeal assumptions before recovery
+ALL 16 automatic-board RGB regression scenarios passed; synthetic supported artwork only

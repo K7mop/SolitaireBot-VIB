@@ -1,0 +1,8 @@
+PASS 1 lookahead notices the real exposed back after removing final visible card
+PASS 2 ace is promoted ahead of unproductive choices
+PASS 3 a known hidden-card reveal outranks an ordinary foundation ascent
+PASS 4 last thirty seconds favor verified immediate foundation points
+PASS 5 unproductive face-up shuffling is pruned rather than repeated until the timer expires
+PASS 6 verified genuine progress opens a stock pass; plain tableau rearrangement cannot
+PASS 7 12 separate 52-card offline rounds: 624 legal verified-model steps, max 99, solved 0, aggregate simulated score 1820
+ALL 7 strategy regression groups passed; simulated deals are not Android/on-device results

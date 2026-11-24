@@ -1,0 +1,127 @@
+{
+  "previous_checkpoint": "/workspace/scratch/254c4aba95a2/speed-0810/validation-fullcorner-before-age",
+  "current_checkpoint": "/workspace/scratch/254c4aba95a2/speed-0810/validation-final",
+  "production_delta": [
+    {
+      "path": "app/src/main/java/com/retq/solitairebot/control/LiveSession.kt",
+      "previous_sha256": "c4c7d300113273428572d3c65be7d586512667bdd7689649e274570ac1928af4",
+      "current_sha256": "16ed1a916b801b9cf263b50dba258d8fb086b95b80e66402dc6d61274090c829"
+    }
+  ],
+  "identical_build_input_count": 16,
+  "previous_snapshot_failure_retained": true,
+  "reason": "The predecessor completed all functional/build checks, but correctly failed its source-stability gate because the approved LiveSession previous-frame-age fix landed during that run. Its raw failure is retained. Final sources, all JUnit tests, resources, D8, source stability and both affected control suites were freshly rebuilt/retested. Only standalone suites that do not compile LiveSession are reused; their production sources and all build inputs are identical.",
+  "fresh_checks": [
+    "core-kotlin-typecheck",
+    "android-kotlin-typecheck",
+    "jvm-tests-compile",
+    "jvm-tests",
+    "resource-compile",
+    "resource-link",
+    "manifest-badging",
+    "resource-java",
+    "android-dex",
+    "production-source-snapshot-stability",
+    "build-input-snapshot-stability",
+    "control-regression",
+    "control-latency"
+  ],
+  "reused_checks": [
+    {
+      "check": "core-smoke",
+      "log_sha256": "27060ca18bcd9a7e18d65b56d9db720b606893c5a393a68e6c400ab909a2a8c9",
+      "current_runner_sha256": "2070e248f059a8492fd719779b7ce116abefcb78678452af71c35d0479029f20",
+      "source_basis": "All production sources except LiveSession unchanged; this runner does not include LiveSession."
+    },
+    {
+      "check": "vision-regression",
+      "log_sha256": "822fbac23e28c4f77e2444f1c020fafe3924ad739fd608e5380938acd6502a53",
+      "current_runner_sha256": "247d93aa36e26f2f5e6295d47f94b6fe894c8c654f5509a2ad0d1544b4ff9075",
+      "source_basis": "All production sources except LiveSession unchanged; this runner does not include LiveSession."
+    },
+    {
+      "check": "automatic-glyph-regression",
+      "log_sha256": "45633ccce52be062eaf6731db0701e59e168a9efa1c6301a09146e70494a34a0",
+      "current_runner_sha256": "9073cc03d6f7b3b21f22179d75acbac8ff751370c251d4dfcfd1cda9fafb3e35",
+      "source_basis": "All production sources except LiveSession unchanged; this runner does not include LiveSession."
+    },
+    {
+      "check": "automatic-board-regression",
+      "log_sha256": "c10de3b14eb679d5c0e383e1cdff125188ebc2ccd1632de54ccafb1e84e75af7",
+      "current_runner_sha256": "c2884b2b4b22696b7f3bc2bd91d0206885d60a6621b3d24aa2ce876dd61edbeb",
+      "source_basis": "All production sources except LiveSession unchanged; this runner does not include LiveSession."
+    },
+    {
+      "check": "waste-occupancy-regression",
+      "log_sha256": "d32439580cdf368b89cc43fb7dca9f889cbf89cc5636ef74b5d5bbab071a474d",
+      "current_runner_sha256": "6585d69c6d8021862f203fadec5dba27b66b22dfb383f8c60b1e7f9c385a1444",
+      "source_basis": "All production sources except LiveSession unchanged; this runner does not include LiveSession."
+    },
+    {
+      "check": "strategy-regression",
+      "log_sha256": "420a0e48ed562ab8573072a3b5bce808c260e1511f9c707ff1a425169e6bda46",
+      "current_runner_sha256": "1782f366ae61cb5d798817c4273b9fed467c516e143d90845f31fa3c14dcb2de",
+      "source_basis": "All production sources except LiveSession unchanged; this runner does not include LiveSession."
+    },
+    {
+      "check": "smart-089",
+      "log_sha256": "161358dc9b5be081110a655a329c622b6c983125190e48f0db58dc48d78f4f05",
+      "current_runner_sha256": "6d50ea96bc389b036bab89120c2deffc11f9228858ca98efe6c08e19101ba787",
+      "source_basis": "All production sources except LiveSession unchanged; this runner does not include LiveSession."
+    },
+    {
+      "check": "hud-089",
+      "log_sha256": "2d0f5699da1a4e25ded31a2f80022444cf110847aff9372a000b89bdccf49786",
+      "current_runner_sha256": "61d754e6f2f16cfa0a0fcba07ed6759a2f33262f9650cd98a99dba84dc1b77b7",
+      "source_basis": "All production sources except LiveSession unchanged; this runner does not include LiveSession."
+    },
+    {
+      "check": "strategy-comparison-089",
+      "log_sha256": "1c92bab87b0072df9c20090f3bfb72d4f694ff84cf5e225c0e7eb638cd98317f",
+      "current_runner_sha256": "1bba47da50d28bc1e5784965a8589cb28a2b85b91fbf2fbf45064bc8eb1a5bbe",
+      "source_basis": "All production sources except LiveSession unchanged; this runner does not include LiveSession."
+    },
+    {
+      "check": "speed-strategy-0810",
+      "log_sha256": "ee2e0d4067e8c551d88d553e399c6750c25e6ee670ef7d8fb5519928aaf04179",
+      "current_runner_sha256": "bc6a9926d349315db96e75338d304ca076537ffa971ad4d7190a8b7ea1d1a4c6",
+      "source_basis": "All production sources except LiveSession unchanged; this runner does not include LiveSession."
+    },
+    {
+      "check": "frame-packing-regression",
+      "log_sha256": "dc2530b928e0d77dfd8f52469ef4cca6796edd61e4c8a7e06ef5cd2dbff6f544",
+      "current_runner_sha256": "c16bca22dd460a777ca726c8a76b4b2b68fc62a5096ee7b1cf179071a5d835e4",
+      "source_basis": "All production sources except LiveSession unchanged; this runner does not include LiveSession."
+    },
+    {
+      "check": "vision-source-typecheck",
+      "log_sha256": "4d780afcdf5df8e46732394b3e150afd07840e9f7d782d1c7f1efa6f0bb07050",
+      "current_runner_sha256": "b7dd6ed674b3f3a0cb5b0bf2fc5c3d53d645a85e5f8672cd6ed98d61b03f8cdb",
+      "source_basis": "All production sources except LiveSession unchanged; this runner does not include LiveSession."
+    },
+    {
+      "check": "vision-speed-regression",
+      "log_sha256": "3122efe0fad9e38af1f3add43fd9a86bdae12afb69e3f4106c1dbc65cfd608f0",
+      "current_runner_sha256": "83e2f4e7d258599f2d20fb5c9c40bed47a7b1a1435d3417dde952352b8fde83e",
+      "source_basis": "All production sources except LiveSession unchanged; this runner does not include LiveSession."
+    },
+    {
+      "check": "independent-icon-regression",
+      "log_sha256": "d87f10d2808f310ccbfc7bb4e684df106fe1ee31f329f13c10803af06c82ea50",
+      "current_runner_sha256": "1e648dfa62ae5451632d41f59f871ca6ef7731f99db25c52e00bef7e9c13bec6",
+      "source_basis": "All production sources except LiveSession unchanged; this runner does not include LiveSession."
+    },
+    {
+      "check": "diagnostics-0810",
+      "log_sha256": "cb8c9b891b246c807585e73aeb41b483032d9b758baf56f65f0469015de4c7ee",
+      "current_runner_sha256": "4ceb03edd1ec23c2d1abfba1c6525ba8d9d441ca5b3cccda31f4cc77f42bcfc4",
+      "source_basis": "All production sources except LiveSession unchanged; this runner does not include LiveSession."
+    }
+  ],
+  "preceding_evidence_included": [
+    "preceding-fullcorner-checks.json",
+    "preceding-fullcorner-production-sources.json",
+    "preceding-fullcorner-build-inputs.json",
+    "preceding-fullcorner-source-stability.log"
+  ]
+}

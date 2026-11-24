@@ -1,0 +1,16 @@
+dejavu_sans_19 correct=36 unknown=16 wrong=0
+dejavu_sans_25 correct=52 unknown=0 wrong=0
+dejavu_sans_33 correct=52 unknown=0 wrong=0
+dejavu_serif_19 correct=30 unknown=22 wrong=0
+dejavu_serif_25 correct=40 unknown=12 wrong=0
+dejavu_serif_33 correct=52 unknown=0 wrong=0
+liberation_serif_19 correct=40 unknown=12 wrong=0
+liberation_serif_25 correct=22 unknown=30 wrong=0
+liberation_serif_33 correct=44 unknown=8 wrong=0
+noto_sans_bold_19 correct=46 unknown=6 wrong=0
+noto_sans_bold_25 correct=52 unknown=0 wrong=0
+noto_sans_bold_33 correct=52 unknown=0 wrong=0
+shift_high correct=52 unknown=0 wrong=0
+shift_low correct=52 unknown=0 wrong=0
+Automatic card fixtures: correct=622 unknown=106 wrong=0; negative rejections=28/28; suit icons=16/16; recycle=8/8
+Desktop JVM benchmark: asset load 439.72 ms; 7-card batch median 4.81 ms; max 7.10 ms; samples=25 after5warmup; excludes capture/layout/Android

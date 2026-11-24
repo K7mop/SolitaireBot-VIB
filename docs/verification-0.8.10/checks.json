@@ -1,0 +1,157 @@
+[
+  {
+    "check": "core-kotlin-typecheck",
+    "exit_code": 0,
+    "elapsed_seconds": 8.406
+  },
+  {
+    "check": "android-kotlin-typecheck",
+    "exit_code": 0,
+    "elapsed_seconds": 14.636
+  },
+  {
+    "check": "jvm-tests-compile",
+    "exit_code": 0,
+    "elapsed_seconds": 5.884
+  },
+  {
+    "check": "jvm-tests",
+    "exit_code": 0,
+    "elapsed_seconds": 1.243
+  },
+  {
+    "check": "core-smoke",
+    "exit_code": 0,
+    "elapsed_seconds": 8.061,
+    "reused_from": "/workspace/scratch/254c4aba95a2/speed-0810/validation-fullcorner-before-age"
+  },
+  {
+    "check": "control-regression",
+    "exit_code": 0,
+    "elapsed_seconds": 11.381
+  },
+  {
+    "check": "vision-regression",
+    "exit_code": 0,
+    "elapsed_seconds": 11.83,
+    "reused_from": "/workspace/scratch/254c4aba95a2/speed-0810/validation-fullcorner-before-age"
+  },
+  {
+    "check": "automatic-glyph-regression",
+    "exit_code": 0,
+    "elapsed_seconds": 11.442,
+    "reused_from": "/workspace/scratch/254c4aba95a2/speed-0810/validation-fullcorner-before-age"
+  },
+  {
+    "check": "automatic-board-regression",
+    "exit_code": 0,
+    "elapsed_seconds": 14.67,
+    "reused_from": "/workspace/scratch/254c4aba95a2/speed-0810/validation-fullcorner-before-age"
+  },
+  {
+    "check": "waste-occupancy-regression",
+    "exit_code": 0,
+    "elapsed_seconds": 5.702,
+    "reused_from": "/workspace/scratch/254c4aba95a2/speed-0810/validation-fullcorner-before-age"
+  },
+  {
+    "check": "strategy-regression",
+    "exit_code": 0,
+    "elapsed_seconds": 8.446,
+    "reused_from": "/workspace/scratch/254c4aba95a2/speed-0810/validation-fullcorner-before-age"
+  },
+  {
+    "check": "smart-089",
+    "exit_code": 0,
+    "elapsed_seconds": 7.873,
+    "reused_from": "/workspace/scratch/254c4aba95a2/speed-0810/validation-fullcorner-before-age"
+  },
+  {
+    "check": "hud-089",
+    "exit_code": 0,
+    "elapsed_seconds": 4.908,
+    "reused_from": "/workspace/scratch/254c4aba95a2/speed-0810/validation-fullcorner-before-age"
+  },
+  {
+    "check": "strategy-comparison-089",
+    "exit_code": 0,
+    "elapsed_seconds": 9.054,
+    "reused_from": "/workspace/scratch/254c4aba95a2/speed-0810/validation-fullcorner-before-age"
+  },
+  {
+    "check": "speed-strategy-0810",
+    "exit_code": 0,
+    "elapsed_seconds": 8.142,
+    "reused_from": "/workspace/scratch/254c4aba95a2/speed-0810/validation-fullcorner-before-age"
+  },
+  {
+    "check": "frame-packing-regression",
+    "exit_code": 0,
+    "elapsed_seconds": 4.136,
+    "reused_from": "/workspace/scratch/254c4aba95a2/speed-0810/validation-fullcorner-before-age"
+  },
+  {
+    "check": "control-latency",
+    "exit_code": 0,
+    "elapsed_seconds": 10.172
+  },
+  {
+    "check": "vision-source-typecheck",
+    "exit_code": 0,
+    "elapsed_seconds": 9.578,
+    "reused_from": "/workspace/scratch/254c4aba95a2/speed-0810/validation-fullcorner-before-age"
+  },
+  {
+    "check": "vision-speed-regression",
+    "exit_code": 0,
+    "elapsed_seconds": 13.362,
+    "reused_from": "/workspace/scratch/254c4aba95a2/speed-0810/validation-fullcorner-before-age"
+  },
+  {
+    "check": "independent-icon-regression",
+    "exit_code": 0,
+    "elapsed_seconds": 12.554,
+    "reused_from": "/workspace/scratch/254c4aba95a2/speed-0810/validation-fullcorner-before-age"
+  },
+  {
+    "check": "diagnostics-0810",
+    "exit_code": 0,
+    "elapsed_seconds": 4.452,
+    "reused_from": "/workspace/scratch/254c4aba95a2/speed-0810/validation-fullcorner-before-age"
+  },
+  {
+    "check": "resource-compile",
+    "exit_code": 0,
+    "elapsed_seconds": 0.003
+  },
+  {
+    "check": "resource-link",
+    "exit_code": 0,
+    "elapsed_seconds": 0.286
+  },
+  {
+    "check": "manifest-badging",
+    "exit_code": 0,
+    "elapsed_seconds": 0.002
+  },
+  {
+    "check": "resource-java",
+    "exit_code": 0,
+    "elapsed_seconds": 0.511
+  },
+  {
+    "check": "android-dex",
+    "exit_code": 0,
+    "elapsed_seconds": 6.476
+  },
+  {
+    "check": "production-source-snapshot-stability",
+    "exit_code": 0,
+    "elapsed_seconds": 0
+  },
+  {
+    "check": "build-input-snapshot-stability",
+    "exit_code": 0,
+    "elapsed_seconds": 0
+  }
+]

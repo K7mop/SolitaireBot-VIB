@@ -1,0 +1,20 @@
+PASS 1: Exact RGBA bytes, stride=4 padding=0; source cursor preserved
+PASS 2: Exact RGBA bytes, stride=4 padding=1; source cursor preserved
+PASS 3: Exact RGBA bytes, stride=4 padding=16; source cursor preserved
+PASS 4: Exact RGBA bytes, stride=4 padding=64; source cursor preserved
+PASS 5: Exact RGBA bytes, stride=5 padding=0; source cursor preserved
+PASS 6: Exact RGBA bytes, stride=5 padding=1; source cursor preserved
+PASS 7: Exact RGBA bytes, stride=5 padding=16; source cursor preserved
+PASS 8: Exact RGBA bytes, stride=5 padding=64; source cursor preserved
+PASS 9: Exact RGBA bytes, stride=8 padding=0; source cursor preserved
+PASS 10: Exact RGBA bytes, stride=8 padding=1; source cursor preserved
+PASS 11: Exact RGBA bytes, stride=8 padding=16; source cursor preserved
+PASS 12: Exact RGBA bytes, stride=8 padding=64; source cursor preserved
+PASS 13: Rejects last byte outside buffer
+PASS 14: Rejects overlapping rows
+PASS 15: Rejects unsupported short pixel stride
+PASS 16: Rejects dimensions before overflowing allocation
+PASS 17: Padded buffer reused but updated from current frame
+PASS 18: Close releases retained scratch buffer
+FRAME_PREPARATION_ONLY width=1080 height=2316 oldMedianMs=1.892457 newMedianMs=0.507283 oldP95Ms=2.095712 newP95Ms=0.762917 checksum=-9124411
+ALL 18 frame packing checks passed; no Android bitmap/device benchmark

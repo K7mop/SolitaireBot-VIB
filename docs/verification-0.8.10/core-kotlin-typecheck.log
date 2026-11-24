@@ -1,0 +1,21 @@
+core/src/main/kotlin/com/retq/solitairebot/core/EndgamePlanner.kt:30:27: warning: only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'EndgamePlanner.Node?'.
+            val key = key(node.board)
+                          ^^^^
+core/src/main/kotlin/com/retq/solitairebot/core/EndgamePlanner.kt:33:17: warning: only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'EndgamePlanner.Node?'.
+            if (node.board.foundations.values.sum() == 52) return Solution(node.path, explored)
+                ^^^^
+core/src/main/kotlin/com/retq/solitairebot/core/EndgamePlanner.kt:33:76: warning: only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'EndgamePlanner.Node?'.
+            if (node.board.foundations.values.sum() == 52) return Solution(node.path, explored)
+                                                                           ^^^^
+core/src/main/kotlin/com/retq/solitairebot/core/EndgamePlanner.kt:35:50: warning: only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'EndgamePlanner.Node?'.
+            val actions = MoveGenerator.generate(node.board).filter {
+                                                 ^^^^
+core/src/main/kotlin/com/retq/solitairebot/core/EndgamePlanner.kt:39:58: warning: only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'EndgamePlanner.Node?'.
+                val next = MoveSimulator.applyKnownLegal(node.board, move)
+                                                         ^^^^
+core/src/main/kotlin/com/retq/solitairebot/core/EndgamePlanner.kt:42:50: warning: only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'EndgamePlanner.Node?'.
+                val rating = foundation * 100 - (node.path.size + 1) * 2 +
+                                                 ^^^^
+core/src/main/kotlin/com/retq/solitairebot/core/EndgamePlanner.kt:44:38: warning: only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'EndgamePlanner.Node?'.
+                queue.add(Node(next, node.path + move, rating))
+                                     ^^^^

@@ -1,0 +1,14 @@
+PASS card-example count is distinct from glyph coverage
+PASS confirmed empty columns survive a live read and accept kings
+PASS same-session empty visual evidence survives absence of manual data
+PASS reviewed-empty/current-occupied cannot be certified empty from live pixels
+PASS manual declarations without exact reference bitmap give no empty proof
+PASS lowest physical card wins; multi-run anchors stay in exposed strips; minimum confidence
+PASS previously identified cards retain only matched visible-strip evidence after overlap
+PASS unknown lowest card never promotes a readable upper card
+PASS waste top follows the rightmost exposed card as fan shrinks
+PASS stock back and empty stock are positive taught visual states
+PASS new session clears temporary manual visual evidence
+PASS cross-instance training is serialized without lost revisions/examples
+PASS concurrent recognition observes immutable template snapshots
+ALL 13 vision regression scenarios passed (synthetic RGB fixtures, Android boundary doubles)

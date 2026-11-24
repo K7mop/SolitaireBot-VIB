@@ -1,0 +1,17 @@
+PASS 1: Identical no-progress pass blocked BEFORE paying a second fee
+PASS 2: Remembered identical cycle remains blocked
+PASS 3: Unverified image changes do not manufacture progress
+PASS 4: Confirmed newly uncovered back reopens previously blocked stock opportunity
+PASS 5: Re-evaluation neither spends nor invents another recycle fee
+PASS 6: Pointless foundation rollback stays excluded
+PASS 7: Known QS rollback enables JH transfer and reveals a back
+PASS 8: Recovery continuation transfers the observed run instead of immediately reversing
+PASS 9: Unknown hidden count does not invent a reveal bonus
+PASS 10: Forced legal draw bypasses extra tree search without changing its meaning
+PASS 11: Forced stock reset still respects confirmed 15-point cost
+PASS 12: Unknown hidden count by itself is not a claimed reveal
+PASS 13: A positively seen covered back gets reveal priority without inventing its count
+PASS 14: Root visual evidence never fills hidden counts in simulated future states
+PASS 15: Unproven unknown-column change alone does not reopen stock
+PASS 16: Confirmed game auto-flip counts as progress when its covered back was positively seen
+ALL 16 speed/stock strategy checks passed

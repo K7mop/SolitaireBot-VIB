@@ -1,0 +1,582 @@
+[
+  {
+    "name": "blank-green.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "ring-green-2-green.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "ring-green-4-green.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "ring-green-6-green.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "arc-green-0-green.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "arc-green-30-green.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "arc-green-60-green.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "arc-green-90-green.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "arc-green-120-green.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "arc-green-150-green.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "arc-green-180-green.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "arc-green-210-green.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "arc-green-240-green.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "arc-green-270-green.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "arc-green-300-green.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "arc-green-330-green.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "cross-green-green.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "triangle-green-green.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "square-green-green.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "disk-green-green.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "ring-gold-2-green.png",
+    "busy": true,
+    "recycle": false
+  },
+  {
+    "name": "ring-gold-4-green.png",
+    "busy": true,
+    "recycle": false
+  },
+  {
+    "name": "ring-gold-6-green.png",
+    "busy": true,
+    "recycle": false
+  },
+  {
+    "name": "arc-gold-0-green.png",
+    "busy": true,
+    "recycle": false
+  },
+  {
+    "name": "arc-gold-30-green.png",
+    "busy": true,
+    "recycle": false
+  },
+  {
+    "name": "arc-gold-60-green.png",
+    "busy": true,
+    "recycle": false
+  },
+  {
+    "name": "arc-gold-90-green.png",
+    "busy": true,
+    "recycle": false
+  },
+  {
+    "name": "arc-gold-120-green.png",
+    "busy": true,
+    "recycle": false
+  },
+  {
+    "name": "arc-gold-150-green.png",
+    "busy": true,
+    "recycle": false
+  },
+  {
+    "name": "arc-gold-180-green.png",
+    "busy": true,
+    "recycle": false
+  },
+  {
+    "name": "arc-gold-210-green.png",
+    "busy": true,
+    "recycle": false
+  },
+  {
+    "name": "arc-gold-240-green.png",
+    "busy": true,
+    "recycle": false
+  },
+  {
+    "name": "arc-gold-270-green.png",
+    "busy": true,
+    "recycle": false
+  },
+  {
+    "name": "arc-gold-300-green.png",
+    "busy": true,
+    "recycle": false
+  },
+  {
+    "name": "arc-gold-330-green.png",
+    "busy": true,
+    "recycle": false
+  },
+  {
+    "name": "cross-gold-green.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "triangle-gold-green.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "square-gold-green.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "disk-gold-green.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "ring-white-2-green.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "ring-white-4-green.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "ring-white-6-green.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "arc-white-0-green.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "arc-white-30-green.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "arc-white-60-green.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "arc-white-90-green.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "arc-white-120-green.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "arc-white-150-green.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "arc-white-180-green.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "arc-white-210-green.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "arc-white-240-green.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "arc-white-270-green.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "arc-white-300-green.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "arc-white-330-green.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "cross-white-green.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "triangle-white-green.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "square-white-green.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "disk-white-green.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "blank-blue.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "ring-green-2-blue.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "ring-green-4-blue.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "ring-green-6-blue.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "arc-green-0-blue.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "arc-green-30-blue.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "arc-green-60-blue.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "arc-green-90-blue.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "arc-green-120-blue.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "arc-green-150-blue.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "arc-green-180-blue.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "arc-green-210-blue.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "arc-green-240-blue.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "arc-green-270-blue.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "arc-green-300-blue.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "arc-green-330-blue.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "cross-green-blue.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "triangle-green-blue.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "square-green-blue.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "disk-green-blue.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "ring-gold-2-blue.png",
+    "busy": true,
+    "recycle": false
+  },
+  {
+    "name": "ring-gold-4-blue.png",
+    "busy": true,
+    "recycle": false
+  },
+  {
+    "name": "ring-gold-6-blue.png",
+    "busy": true,
+    "recycle": false
+  },
+  {
+    "name": "arc-gold-0-blue.png",
+    "busy": true,
+    "recycle": false
+  },
+  {
+    "name": "arc-gold-30-blue.png",
+    "busy": true,
+    "recycle": false
+  },
+  {
+    "name": "arc-gold-60-blue.png",
+    "busy": true,
+    "recycle": false
+  },
+  {
+    "name": "arc-gold-90-blue.png",
+    "busy": true,
+    "recycle": false
+  },
+  {
+    "name": "arc-gold-120-blue.png",
+    "busy": true,
+    "recycle": false
+  },
+  {
+    "name": "arc-gold-150-blue.png",
+    "busy": true,
+    "recycle": false
+  },
+  {
+    "name": "arc-gold-180-blue.png",
+    "busy": true,
+    "recycle": false
+  },
+  {
+    "name": "arc-gold-210-blue.png",
+    "busy": true,
+    "recycle": false
+  },
+  {
+    "name": "arc-gold-240-blue.png",
+    "busy": true,
+    "recycle": false
+  },
+  {
+    "name": "arc-gold-270-blue.png",
+    "busy": true,
+    "recycle": false
+  },
+  {
+    "name": "arc-gold-300-blue.png",
+    "busy": true,
+    "recycle": false
+  },
+  {
+    "name": "arc-gold-330-blue.png",
+    "busy": true,
+    "recycle": false
+  },
+  {
+    "name": "cross-gold-blue.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "triangle-gold-blue.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "square-gold-blue.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "disk-gold-blue.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "ring-white-2-blue.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "ring-white-4-blue.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "ring-white-6-blue.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "arc-white-0-blue.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "arc-white-30-blue.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "arc-white-60-blue.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "arc-white-90-blue.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "arc-white-120-blue.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "arc-white-150-blue.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "arc-white-180-blue.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "arc-white-210-blue.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "arc-white-240-blue.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "arc-white-270-blue.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "arc-white-300-blue.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "arc-white-330-blue.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "cross-white-blue.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "triangle-white-blue.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "square-white-blue.png",
+    "busy": null,
+    "recycle": false
+  },
+  {
+    "name": "disk-white-blue.png",
+    "busy": null,
+    "recycle": false
+  }
+]

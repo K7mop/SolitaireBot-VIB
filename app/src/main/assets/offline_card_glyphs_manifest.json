@@ -1,0 +1,61 @@
+{
+  "format": 1,
+  "patterns": 10674,
+  "fonts": [
+    "DejaVu Sans",
+    "DejaVu Sans Bold",
+    "DejaVu Serif",
+    "DejaVu Serif Bold",
+    "Liberation Sans",
+    "Liberation Sans Bold",
+    "Liberation Serif",
+    "Liberation Serif Bold",
+    "Noto Sans",
+    "Noto Sans Bold",
+    "Noto Serif",
+    "Noto Serif Bold",
+    "Open Sans",
+    "Open Sans Bold"
+  ],
+  "pixel_sizes": [
+    12,
+    14,
+    16,
+    18,
+    20,
+    22,
+    24,
+    26,
+    28,
+    30,
+    34,
+    38,
+    44,
+    52,
+    64
+  ],
+  "thresholds": [
+    120,
+    170
+  ],
+  "normalization": "24x24 binary, aspect-preserving fit20, nearest-neighbour",
+  "ranks": "A23456789TJQK",
+  "suits": "CDHS",
+  "suit_shapes": "filled and hollow",
+  "recycle_symbols": "↻↺⟳⟲",
+  "distractors": "O01ILBX?ZS and unrelated shapes",
+  "purpose": "Local conservative shape recognition. Match scores are similarities, not calibrated probabilities. No phone accuracy claim.",
+  "user_calibration_additions_0_8_10": {
+    "rank_suit_patterns": 16,
+    "green_reset_patterns": 4,
+    "sources": [
+      "137242.jpg labelled card corners",
+      "137246.jpg labelled JS corner",
+      "137529.mp4 stock-only green reset crops at219.0 and225.5 seconds"
+    ],
+    "gold_ring": "Busy indicator only, never a recycle positive",
+    "limitations": "Calibrations are not held-out tests; filmed low contrast resets can remain unknown.",
+    "resampled_rank_suit_patterns": 32
+  },
+  "sha256": "c67ecc693c9e7936a6146de4ba5de8ca9f4049904ea74d318719b17dc2b076f8"
+}

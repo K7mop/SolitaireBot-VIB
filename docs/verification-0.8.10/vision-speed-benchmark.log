@@ -1,0 +1,7 @@
+initial=الأعمدة: 1:AS | 2:KD | 3:QC | 4:JH | 5:TC | 6:9D | 7:8S | السحب: فارغ | أوراق مقروءة: 7 | مناطق غير مؤكدة: 0 unknown=[]
+DESKTOP full-board+HUD steady-frame medianMs=3.379 p95Ms=5.299 maxMs=7.664 samples=50 singlePixelCallsPerFrame=0 bulkCallsPerFrame=3
+DESKTOP changing-board medianMs=2.891 p95Ms=4.161 maxMs=18.419 samples=60 (all semantic transitions checked)
+USER 137242.jpg size=716x1536 الأعمدة: 1:2S | 2:6D | 3:QD | 4:KC | 5:4S | 6:QS | 7:5C | السحب: 6S | أوراق مقروءة: 10 | مناطق غير مؤكدة: 0 stock=AVAILABLE unknown=[] hud=Reading(score=240, remainingSeconds=227, confidence=0.968) (1080 is same-source resampling, not an independent phone capture)
+USER 137242.jpg size=1080x2316 الأعمدة: 1:2S | 2:6D | 3:QD | 4:KC | 5:4S | 6:QS | 7:5C | السحب: 6S | أوراق مقروءة: 10 | مناطق غير مؤكدة: 0 stock=AVAILABLE unknown=[] hud=Reading(score=240, remainingSeconds=null, confidence=0.7711864) (1080 is same-source resampling, not an independent phone capture)
+USER 137246.jpg size=716x1536 الأعمدة: 1:2S | 2:5C | 3:QD | 4:KC | 5:4S | 6:QS | 7:6H | السحب: JS | أوراق مقروءة: 10 | مناطق غير مؤكدة: 0 stock=AVAILABLE unknown=[] hud=Reading(score=260, remainingSeconds=101, confidence=0.96850395) (1080 is same-source resampling, not an independent phone capture)
+USER 137246.jpg size=1080x2316 الأعمدة: 1:2S | 2:5C | 3:QD | 4:KC | 5:4S | 6:QS | 7:6H | السحب: JS | أوراق مقروءة: 10 | مناطق غير مؤكدة: 0 stock=AVAILABLE unknown=[] hud=Reading(score=null, remainingSeconds=null, confidence=0.0) (1080 is same-source resampling, not an independent phone capture)

@@ -1,0 +1,20 @@
+PASS 1: Starts without fictitious stock fees
+PASS 2: Confirmed recycle costs 15 points
+PASS 3: Only positively observed waste cards are remembered
+PASS 4: Repeated frames do not create fake additional draws
+PASS 5: Unknown draw-three cards never receive invented identities
+PASS 6: A revealed back is verified progress
+PASS 7: Score ledger counts verified foundation and reveal, and recycle fee
+PASS 8: Unknown stock cannot trigger full-board endgame
+PASS 9: Fully known 52-card finish is detected
+PASS 10: Endgame planner finds the final foundation move
+PASS 11: Finish route outranks heuristic suggestions
+PASS 12: The 15-point recycle fee is applied to decision ranking
+PASS 13: First positively observed recycle remains available
+PASS 14: Beam sees the newly freed foundation card
+PASS 15: Card memory keeps only actually seen identities
+PASS 16: Observed foundation implies lower ranks but does not locate unseen cards
+PASS 17: Unknown-card opportunity is a probability, not a hidden-card identity
+PASS 18: Second identical stock pass is rejected before another -15 fee
+PASS 19: HUD timer requires stable monotonic samples and expires on missing data
+ALL 19 smart strategy tests passed

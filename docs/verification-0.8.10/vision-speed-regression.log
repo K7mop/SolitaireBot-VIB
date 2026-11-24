@@ -1,0 +1,20 @@
+PASS observed ordinary blue stock is not a busy or recycle icon
+PASS three observed gold rings on blue/green backgrounds block taps and never recycle
+Green reset crops: calibration=2/2; heldout accepted=4 unknown=8; filmed blur remains unsupported when uncertain
+PASS faint green static reset uses its shape; unclear heldouts remain unknown
+Observed card crops: calibration=9/9; heldout accepted=7 unknown=0; confidently wrong=0
+PASS fresh card masks retain identity with no false recycle recognition
+PASS lower-rank corroboration requires an explicitly complete face and rejects conflicts, rotated6/9, blanks and invalid bounds
+SCALED heldout5C method=Bilinear image interpolation mode actual=null
+SCALED heldout5C method=Bicubic image interpolation mode actual=(5C, 0.93370533)
+SCALED heldout6H method=Bilinear image interpolation mode actual=(6H, 0.9529914)
+SCALED heldout6H method=Bicubic image interpolation mode actual=(6H, 0.9527897)
+SCALED full-face heldouts accepted=3/4 unknown=1; resampling is not independent capture evidence
+PASS clear rescaled lower ranks resolve ambiguity; uncertain resamples remain unknown without new teaching
+PASS bulk frame evidence is fresh and released after cancellation
+Synthetic covered-back evidence=[1, 2, 3, 4, 5, 6]; counts=[0, null, null, null, null, null, null]
+PASS covered-back priority requires learned pattern evidence, never pale face strips, blank gaps or invented counts
+USER preliminary covered=[1, 2, 3, 4, 5, 6] positions={T0:0=650, T0=650, T1:0=664, T1=664, T2:0=664, T2=664, T3:0=677, T3=677, T4:0=705, T4=705, T5:0=720, T5=720, T6:0=733, T6=733}
+USER screenshot137242 covered=[1, 2, 3, 4, 5, 6]; QD->KC score=255; stock=-33; hidden counts=[0, null, null, null, null, null, null]
+PASS actual screenshot pixels make QD-to-KC reveal eligible ahead of stock without guessing hidden counts
+ALL 9 vision speed/evidence regression groups passed; desktop RGB harness, not an Android device round

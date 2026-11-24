@@ -1,0 +1,142 @@
+[
+  {
+    "check": "core-kotlin-typecheck",
+    "exit_code": 0,
+    "elapsed_seconds": 8.245
+  },
+  {
+    "check": "android-kotlin-typecheck",
+    "exit_code": 0,
+    "elapsed_seconds": 14.657
+  },
+  {
+    "check": "jvm-tests-compile",
+    "exit_code": 0,
+    "elapsed_seconds": 5.502
+  },
+  {
+    "check": "jvm-tests",
+    "exit_code": 0,
+    "elapsed_seconds": 1.049
+  },
+  {
+    "check": "core-smoke",
+    "exit_code": 0,
+    "elapsed_seconds": 8.061
+  },
+  {
+    "check": "control-regression",
+    "exit_code": 0,
+    "elapsed_seconds": 10.736
+  },
+  {
+    "check": "vision-regression",
+    "exit_code": 0,
+    "elapsed_seconds": 11.83
+  },
+  {
+    "check": "automatic-glyph-regression",
+    "exit_code": 0,
+    "elapsed_seconds": 11.442
+  },
+  {
+    "check": "automatic-board-regression",
+    "exit_code": 0,
+    "elapsed_seconds": 14.67
+  },
+  {
+    "check": "waste-occupancy-regression",
+    "exit_code": 0,
+    "elapsed_seconds": 5.702
+  },
+  {
+    "check": "strategy-regression",
+    "exit_code": 0,
+    "elapsed_seconds": 8.446
+  },
+  {
+    "check": "smart-089",
+    "exit_code": 0,
+    "elapsed_seconds": 7.873
+  },
+  {
+    "check": "hud-089",
+    "exit_code": 0,
+    "elapsed_seconds": 4.908
+  },
+  {
+    "check": "strategy-comparison-089",
+    "exit_code": 0,
+    "elapsed_seconds": 9.054
+  },
+  {
+    "check": "speed-strategy-0810",
+    "exit_code": 0,
+    "elapsed_seconds": 8.142
+  },
+  {
+    "check": "frame-packing-regression",
+    "exit_code": 0,
+    "elapsed_seconds": 4.136
+  },
+  {
+    "check": "control-latency",
+    "exit_code": 0,
+    "elapsed_seconds": 10.796
+  },
+  {
+    "check": "vision-source-typecheck",
+    "exit_code": 0,
+    "elapsed_seconds": 9.578
+  },
+  {
+    "check": "vision-speed-regression",
+    "exit_code": 0,
+    "elapsed_seconds": 13.362
+  },
+  {
+    "check": "independent-icon-regression",
+    "exit_code": 0,
+    "elapsed_seconds": 12.554
+  },
+  {
+    "check": "diagnostics-0810",
+    "exit_code": 0,
+    "elapsed_seconds": 4.452
+  },
+  {
+    "check": "resource-compile",
+    "exit_code": 0,
+    "elapsed_seconds": 0.028
+  },
+  {
+    "check": "resource-link",
+    "exit_code": 0,
+    "elapsed_seconds": 0.274
+  },
+  {
+    "check": "manifest-badging",
+    "exit_code": 0,
+    "elapsed_seconds": 0.002
+  },
+  {
+    "check": "resource-java",
+    "exit_code": 0,
+    "elapsed_seconds": 0.483
+  },
+  {
+    "check": "android-dex",
+    "exit_code": 0,
+    "elapsed_seconds": 5.577
+  },
+  {
+    "check": "production-source-snapshot-stability",
+    "exit_code": 1,
+    "elapsed_seconds": 0
+  },
+  {
+    "check": "build-input-snapshot-stability",
+    "exit_code": 0,
+    "elapsed_seconds": 0
+  }
+]

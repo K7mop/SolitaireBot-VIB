@@ -1,0 +1,82 @@
+[
+  {
+    "path": "app/src/main/assets/OFFLINE_GLYPH_LICENSES.txt",
+    "sha256": "102cc3ba6f74551964cd709df68cca23c96e32eca0118edebca9649deaad2820",
+    "bytes": 16583
+  },
+  {
+    "path": "app/src/main/assets/offline_card_glyphs.txt",
+    "sha256": "c67ecc693c9e7936a6146de4ba5de8ca9f4049904ea74d318719b17dc2b076f8",
+    "bytes": 1085728
+  },
+  {
+    "path": "app/src/main/assets/offline_card_glyphs_manifest.json",
+    "sha256": "4d6e68b8f5ca6f855fd05c54eefff9ff47c76abcb213d460eb096ce11a09a413",
+    "bytes": 1519
+  },
+  {
+    "path": "app/src/main/assets/offline_hud_digits.txt",
+    "sha256": "dfcbdde5a123c1f68f8434d007b6f3db9bac08b44a4edafcc0d63233ad106a54",
+    "bytes": 5246
+  },
+  {
+    "path": "app/src/main/res/values/strings.xml",
+    "sha256": "479d3840f2e1eb55b21b07a85307083b055bef083cd9985e1bd05ff829d76127",
+    "bytes": 375
+  },
+  {
+    "path": "app/src/main/res/xml/capture_accessibility_config.xml",
+    "sha256": "3316ad0cd10d9f23cb419b72e96a0dcdb1e9bed6fa37f61ed64397b7927c9c42",
+    "bytes": 422
+  },
+  {
+    "path": "app/src/main/AndroidManifest.xml",
+    "sha256": "c8b93683187543bd4e9c27a1434eb195ee1c218d5233fd8ba29a13189b80ecef",
+    "bytes": 2168
+  },
+  {
+    "path": "app/build.gradle.kts",
+    "sha256": "8519938b5884289d8d79c22f34fe5f2b42efa9c0b306f1e49521778521708cc7",
+    "bytes": 725
+  },
+  {
+    "path": "core/build.gradle.kts",
+    "sha256": "ed8c4d048882ba588b69b21626b97eeacd5f10b14b9142536172b8dced20092b",
+    "bytes": 480
+  },
+  {
+    "path": "build.gradle.kts",
+    "sha256": "882dfe67b2de0ff7eb28a9bab947e12464f0e9ac081a44f997c23f2a7ce5e52b",
+    "bytes": 207
+  },
+  {
+    "path": "settings.gradle.kts",
+    "sha256": "eaa26d00bbe237529bdf22e62efe3f63da3c323ae58cf96a47a145259170fbd5",
+    "bytes": 322
+  },
+  {
+    "path": "gradle.properties",
+    "sha256": "1e166f6a9f802b4bc57d96a4d4c2dee5d860b5e2d845bc6ad2ac60c679fbf836",
+    "bytes": 129
+  },
+  {
+    "path": "gradle/wrapper/gradle-wrapper.properties",
+    "sha256": "2191f9dbd218e124a3c4394c148e11041882e7ab9dbaf84f7e70b91a3d213b64",
+    "bytes": 341
+  },
+  {
+    "path": "gradle/wrapper/gradle-wrapper.jar",
+    "sha256": "2db75c40782f5e8ba1fc278a5574bab070adccb2d21ca5a6e5ed840888448046",
+    "bytes": 43583
+  },
+  {
+    "path": "gradlew",
+    "sha256": "9cbbb4d68ff7fb5211c4d58f598ac9d8664c05fdcd1e5f59b7f2c3ac1ee00af0",
+    "bytes": 8784
+  },
+  {
+    "path": "gradlew.bat",
+    "sha256": "0f3ed8f03b50934cb8c48b15a470d5c20a30a5385825e48b55bcc8ea3d8f8e18",
+    "bytes": 2894
+  }
+]

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.retq.solitairebot.core.VisualSafetyTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-11-20T23:15:43" hostname="ef87e29808e1" time="0.012">
+  <properties/>
+  <testcase name="wasteMoveRequiresNewDestinationAndChangedWaste()" classname="com.retq.solitairebot.core.VisualSafetyTest" time="0.003"/>
+  <testcase name="repeatedObservationIsStable()" classname="com.retq.solitairebot.core.VisualSafetyTest" time="0.002"/>
+  <testcase name="onlyVisuallyVerifiableStockChanges()" classname="com.retq.solitairebot.core.VisualSafetyTest" time="0.003"/>
+  <testcase name="requiresObservedFoundationAndSourceChange()" classname="com.retq.solitairebot.core.VisualSafetyTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

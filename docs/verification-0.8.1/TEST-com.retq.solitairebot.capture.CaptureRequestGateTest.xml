@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.retq.solitairebot.capture.CaptureRequestGateTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-11-20T23:15:35" hostname="ef87e29808e1" time="0.004">
+  <properties/>
+  <testcase name="obscuredContentAndFutureFrameTimestampsAreRejected" classname="com.retq.solitairebot.capture.CaptureRequestGateTest" time="0.002"/>
+  <testcase name="missingFramesExpireOnceAfterFifteenSeconds" classname="com.retq.solitairebot.capture.CaptureRequestGateTest" time="0.0"/>
+  <testcase name="lateOverlayHideExtendsDelayBeyondNotificationCountdown" classname="com.retq.solitairebot.capture.CaptureRequestGateTest" time="0.001"/>
+  <testcase name="overlayMustBeHiddenAndItsFramesDrainedFirst" classname="com.retq.solitairebot.capture.CaptureRequestGateTest" time="0.0"/>
+  <testcase name="notificationWaitsThreeSecondsAndRequiresNewFrame" classname="com.retq.solitairebot.capture.CaptureRequestGateTest" time="0.0"/>
+  <testcase name="clockRollbackAndPreRequestHideAreRejected" classname="com.retq.solitairebot.capture.CaptureRequestGateTest" time="0.0"/>
+  <testcase name="staleCallbacksCannotAffectReplacementRequest" classname="com.retq.solitairebot.capture.CaptureRequestGateTest" time="0.0"/>
+  <testcase name="cancelledRequestCannotSaveOrBeResurrected" classname="com.retq.solitairebot.capture.CaptureRequestGateTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

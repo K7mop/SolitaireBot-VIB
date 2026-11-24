@@ -1,0 +1,2 @@
+SIM smart=false deals=12 steps=620 simulatedScore=1790 wins=0 recycles=21 decisions=631 p50=0ms p95=3ms
+SIM smart=true deals=12 steps=625 simulatedScore=1820 wins=0 recycles=20 decisions=636 p50=0ms p95=1ms

@@ -1,0 +1,3 @@
+[0.001s][warning][perf,memops] Cannot use file /tmp/hsperfdata_agent/9 because it is locked by another process (errno = 11)
+production controller cycle=1584ms; capture interval=333ms; stroke=340ms; first dispatch=666ms; next dispatch=2250ms; sampled=7
+PASS: two sequential production-controller actions completed within the stated latency budget

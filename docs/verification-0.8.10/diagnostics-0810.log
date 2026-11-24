@@ -1,0 +1,1 @@
+PASS: whole-round counters and timings survive bounded tail, export stays small, next round resets

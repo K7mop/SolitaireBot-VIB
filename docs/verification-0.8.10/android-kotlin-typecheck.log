@@ -1,0 +1,6 @@
+app/src/main/java/com/retq/solitairebot/ui/ScreenshotCanvas.kt:36:59: warning: 'field scaledDensity: Float' is deprecated. Deprecated in Java.
+        textSize = 14f * context.resources.displayMetrics.scaledDensity
+                                                          ^^^^^^^^^^^^^
+app/src/main/java/com/retq/solitairebot/ui/UiKit.kt:48:29: warning: 'fun setDecorFitsSystemWindows(p0: Boolean): Unit' is deprecated. Deprecated in Java.
+            activity.window.setDecorFitsSystemWindows(false)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^

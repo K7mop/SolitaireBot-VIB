@@ -1,0 +1,50 @@
+[
+  {
+    "check": "android-kotlin-typecheck",
+    "exit_code": 0
+  },
+  {
+    "check": "jvm-tests-compile",
+    "exit_code": 0
+  },
+  {
+    "check": "jvm-tests",
+    "exit_code": 0
+  },
+  {
+    "check": "smoke",
+    "exit_code": 0
+  },
+  {
+    "check": "control-regression",
+    "exit_code": 0
+  },
+  {
+    "check": "vision-regression",
+    "exit_code": 0
+  },
+  {
+    "check": "resource-compile",
+    "exit_code": 0
+  },
+  {
+    "check": "resource-link",
+    "exit_code": 0
+  },
+  {
+    "check": "manifest-badging",
+    "exit_code": 0
+  },
+  {
+    "check": "resource-java",
+    "exit_code": 0
+  },
+  {
+    "check": "android-dex",
+    "exit_code": 0
+  },
+  {
+    "check": "apk-container-badging",
+    "exit_code": 0
+  }
+]

@@ -1,0 +1,10 @@
+# Android API notes — 0.8.10
+
+These official Android references were checked while changing the existing capture and gesture pipeline. They describe platform behavior; the performance measurements are from this project's test logs, not from these references.
+
+- [ImageReader.acquireLatestImage](https://developer.android.com/reference/android/media/ImageReader#acquireLatestImage()): obtains the latest available image while discarding older queued images. Every acquired image must be released. The service keeps `maxImages=2`, closes every image through `use`, and drains the producer even when it does not need bitmap conversion. Reader and bitmap cleanup is queued on the owning worker.
+- [Bitmap.copyPixelsFromBuffer](https://developer.android.com/reference/android/graphics/Bitmap#copyPixelsFromBuffer(java.nio.Buffer)): copies pixel data from the buffer's current position without doing the color conversion performed by `setPixels`. The new RGBA packer preserves byte order and channel bytes, handles row/pixel stride, and does not alter the caller's buffer position. The actual Android bitmap/native copy still requires device validation.
+- [Bitmap.Config](https://developer.android.com/reference/android/graphics/Bitmap.Config): defines the pixel packing required by the bitmap configuration. Production uses the RGBA_8888 ImageReader plane with an ARGB_8888 mutable bitmap.
+- [AccessibilityService.dispatchGesture](https://developer.android.com/reference/android/accessibilityservice/AccessibilityService#dispatchGesture(android.accessibilityservice.GestureDescription,%20android.accessibilityservice.AccessibilityService.GestureResultCallback,%20android.os.Handler)): dispatching a new gesture cancels a gesture already in progress. The controller therefore permits only one physical gesture at a time; it removes waits after positive visual confirmation instead of overlapping gestures.
+
+Producer timestamps identify separate images but are not assumed to share `SystemClock.elapsedRealtime`'s timebase. Freshness limits measure elapsed time since acquisition. No claim is made that the application can measure an arbitrary producer's absolute image age.

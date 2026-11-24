@@ -1,0 +1,9 @@
+app/src/main/java/com/retq/solitairebot/vision/GreenHudReader.kt:37:68: warning: unnecessary safe call on a non-null receiver of type GreenHudReader.Parsed?
+        val confidence = listOfNotNull(if (score != null) scoreText?.confidence else null,
+                                                                   ^
+app/src/main/java/com/retq/solitairebot/vision/GreenHudReader.kt:38:43: warning: unnecessary safe call on a non-null receiver of type GreenHudReader.Parsed?
+            if (seconds != null) timerText?.confidence else null).minOrNull() ?: 0f
+                                          ^
+Score=240 time=227 confidence=0.7837838
+PASS: green HUD source path decodes score and timer in a synthetic image
+duration 9.43

@@ -1,0 +1,20 @@
+PASS 1: verified move waits for cooldown then dispatches next move; no false failure
+PASS 2: stop invalidates queued touch before accessibility dispatch
+PASS 3: late callback cannot complete or cancel another action
+PASS 4: missing callback is blacklisted; fresh reads stop when no different legal move exists
+PASS 5: verification timeout updates status then re-reads without repeating failed move
+PASS 6: guard stop restores overlay and restart retains the attempted edge
+PASS 7: manual mode reacquires frames, sends exactly one move and restores after verification
+PASS 8: same-package dialog window invalidates queued gesture
+PASS 9: legacy trained glyphs with zero card-example counter remain usable for read-only mode
+PASS 10: stock actions require positive confident waste evidence; known empty waste permits draw
+PASS 11: flip tap needs a positive back, confident region and finite point strictly inside that column
+PASS 12: moving back points cannot satisfy two-frame stability or authorize a queued stale flip tap
+PASS 13: new card coordinates invalidate queued touch even when all recognized card identities are unchanged
+PASS 14: stock uses configured draw variant; unknown redeals require a positively seen recycle control
+PASS 15: automatic recovery reads two fresh frames, never repeats a failed edge, and stops at three failures
+PASS 16: manual one-move mode stops on failure and never enters automatic recovery
+PASS 17: late callback from timed-out gesture cannot complete the different recovery action
+PASS 18: watchdog uses last stable frame: transient loss after session 30s survives, sustained loss stops
+PASS 19: late vision publication after stop or capture replacement cannot publish or dispatch after restart
+ALL 19 production-control regression scenarios passed

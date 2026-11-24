@@ -69,8 +69,6 @@ class LivePipeline(
     @Volatile private var noCandidateFrames = 0
     private var noCandidateSince = 0L
     private var lastUnstableNoticeAt = 0L
-    /** After repeated physical failures, wait for an independently changed board. */
-    private var recoveryQuarantine: String? = null
     private var failuresThisRun = 0
     private var readErrors = 0
     private var staleAnalyses = 0
@@ -177,7 +175,6 @@ class LivePipeline(
         arm(Mode.AUTO)
         autoStartedAt = SystemClock.elapsedRealtime()
         failuresThisRun = 0
-        recoveryQuarantine = null
         readErrors = 0
         candidateCacheKey = null
         monitor.autoPlaying = true
@@ -239,7 +236,6 @@ class LivePipeline(
         noCandidateFrames = 0
         noCandidateSince = 0L
         lastUnstableNoticeAt = 0L
-        recoveryQuarantine = null
         readErrors = 0
         candidateCacheKey = null
         lastSavedObservationKey = null
@@ -255,7 +251,6 @@ class LivePipeline(
     private fun cancelWork(reason: String) {
         workEpoch.incrementAndGet()
         mode = Mode.IDLE
-        recoveryQuarantine = null
         candidateCacheKey = null
         val event = LiveSession.cancelPending(reason)
         event.action?.let { outcomes.add(MoveOutcome(it.before.sessionId, it.before.layoutRevision, it.move, false)) }
@@ -462,17 +457,9 @@ class LivePipeline(
         readErrors = 0
         stockMemory.observe(stable.board, stable.evidence().wasteSignature)
         deckKnowledge.observe(stable.board)
-        val quarantine = recoveryQuarantine
-        if (quarantine != null) {
-            val observed = AutoPlayGuard.boardKey(stable.board) + "|" + stable.evidence().wasteSignature
-            if (observed == quarantine) {
-                monitor.aiStatus = "تكررت إخفاقات اللمس؛ المراقبة مستمرة حتى تتغير اللوحة بصورة مؤكدة"
-                return
-            }
-            recoveryQuarantine = null
-            failuresThisRun = 0
-            noCandidateFrames = 0
-        }
+        // A fresh stable board is always reconsidered. Failed edges remain blocked
+        // by AutoPlayGuard, but one failed gesture must not quarantine the whole
+        // visible board: another independently verified legal move may still work.
         val savedKey = stable.board.toString() + "|" + stable.unknownRegions.sorted().joinToString()
         if (app.autoSetupReady && (savedKey != lastSavedObservationKey ||
                 stable.capturedAtMs - lastSavedObservationAt >= 1_000L)) {
@@ -627,8 +614,7 @@ class LivePipeline(
                 // Failed touches separated by real, visually verified progress
                 // must not accumulate into a false three-failure shutdown.
                 failuresThisRun = 0
-                recoveryQuarantine = null
-                monitor.aiStatus = event.message
+                        monitor.aiStatus = event.message
                 if (loop != null) {
                     // A cycle is not permission to repeat the same edge. Park and
                     // continue watching for OTHER untried moves or a real screen
@@ -673,16 +659,9 @@ class LivePipeline(
                     LiveSession.clearObservations()
                     framesNotBefore = SystemClock.elapsedRealtime() + 550L
                     noCandidateFrames = 0; noCandidateSince = 0L
-                    if (failuresThisRun >= 3) {
-                        val before = event.action!!.before
-                        recoveryQuarantine = AutoPlayGuard.boardKey(before.board) + "|" +
-                            before.evidence().wasteSignature
-                        monitor.aiStatus = "ثلاث حركات غير مؤكدة متتابعة؛ " +
-                            "حُظرت المحاولات الفاشلة وستستمر المراقبة بلا نقرات حتى تتغير اللوحة"
-                    } else {
-                        monitor.aiStatus = "لم تتأكد الحركة؛ حُظرت من هذه الحالة. " +
-                            "قراءة جديدة لاختيار بديل ($failuresThisRun/3)"
-                    }
+                    monitor.aiStatus = "لم تتأكد الحركة؛ حُظرت هذه النقلة من الحالة الحالية. " +
+                        "سيعيد المحرك تحليل اللوحة وتجربة بديل مؤكد " +
+                        "(إخفاقات متتابعة: $failuresThisRun)"
                 } else cancelWork(event.message)
             }
             LiveSession.Result.UNCHANGED, LiveSession.Result.IGNORED -> Unit

@@ -68,6 +68,7 @@ class MainActivity : AsyncActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        RoundDiagnostics.attach(this)
         overlaySettingsPending = savedInstanceState?.getBoolean("overlay_settings_pending") ?: false
         captureAfterOverlay = savedInstanceState?.getBoolean("capture_after_overlay") ?: false
         projectionRequestInFlight = savedInstanceState?.getBoolean("projection_request_in_flight") ?: false
@@ -81,7 +82,7 @@ class MainActivity : AsyncActivity() {
             setPadding(dp(18), dp(18), dp(18), dp(28))
             setBackgroundColor(Color.rgb(248, 250, 253))
         }
-        root.addView(label("مساعد السوليتير — 0.9.0 — تشغيل سريع وذكاء متوازن", true))
+        root.addView(label("مساعد السوليتير — 0.9.2-VIB — تشغيل سريع وذكاء متوازن", true))
         root.addView(label("فعّل خدمة اللمس وإذن التحريك والنافذة العائمة، ثم شارك الشاشة وافتح اللعبة التجريبية. عندما تظهر الأوراق اضغط «لقطة وبدء تلقائي» مرة واحدة. بعدها يقرأ المساعد الشاشة ويحرك ويسحب ويقلب الأوراق تلقائيًا، ويتحقق من كل حركة. الرموز غير الواضحة تبقى مجهولة."))
         captureText = label("")
         overlayText = label("")
@@ -166,7 +167,7 @@ class MainActivity : AsyncActivity() {
             val report = RoundDiagnostics.report()
             val share = Intent(Intent.ACTION_SEND).apply {
                 type = "text/plain"
-                putExtra(Intent.EXTRA_SUBJECT, "SolitaireBot 0.8.10 round diagnostics")
+                putExtra(Intent.EXTRA_SUBJECT, "SolitaireBot round diagnostics")
                 putExtra(Intent.EXTRA_TEXT, report)
             }
             startActivity(Intent.createChooser(share, "مشاركة تقرير الجولة"))

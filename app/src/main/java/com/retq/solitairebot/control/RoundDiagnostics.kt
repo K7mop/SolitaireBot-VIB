@@ -73,7 +73,7 @@ object RoundDiagnostics {
 
     @Synchronized fun record(kind: String, details: String) {
         val elapsedMs = ((System.nanoTime() - startMs) / 1_000_000L).coerceAtLeast(0L)
-        val clean = details.replace('\\n', ' ').replace('|', '/').take(260)
+        val clean = details.replace('\n', ' ').replace('|', '/').take(260)
         val key = kind.take(24)
         if (key in counts || counts.size < 32) counts[key] = (counts[key] ?: 0) + 1
         timingPattern.findAll(clean).forEach { match ->
@@ -97,7 +97,7 @@ object RoundDiagnostics {
     private fun appendLineLocked(file: File, line: String) {
         try {
             FileOutputStream(file, true).use { stream ->
-                val bytes = (line + "\\n").toByteArray(StandardCharsets.UTF_8)
+                val bytes = (line + "\n").toByteArray(StandardCharsets.UTF_8)
                 val channel: FileChannel = stream.channel
                 channel.lock().use {
                     stream.write(bytes)
@@ -118,7 +118,7 @@ object RoundDiagnostics {
     private fun writeSnapshot(file: File, lines: List<String>) {
         try {
             FileOutputStream(file, false).use { stream ->
-                stream.write((lines.joinToString("\\n") + if (lines.isEmpty()) "" else "\\n")
+                stream.write((lines.joinToString("\n") + if (lines.isEmpty()) "" else "\n")
                     .toByteArray(StandardCharsets.UTF_8))
                 stream.flush()
                 stream.fd.sync()

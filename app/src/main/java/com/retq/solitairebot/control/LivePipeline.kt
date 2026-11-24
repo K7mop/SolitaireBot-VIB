@@ -82,6 +82,7 @@ class LivePipeline(
     private var lastSavedObservationAt = 0L
     private var lastStatusAt = 0L
     private var lastDiagnosticBoardKey: String? = null
+    private var lastDecisionDiagnosticAt = 0L
 
     init { RoundDiagnostics.attach(context) }
 
@@ -126,6 +127,7 @@ class LivePipeline(
         currentRoundId = app.roundId
         RoundDiagnostics.reset(currentRoundId)
         lastDiagnosticBoardKey = null
+        lastDecisionDiagnosticAt = 0L
         RoundDiagnostics.record("CAPTURE", "screen capture session initialized")
         outcomes.clear()
         LiveSession.beginSession(captureGeneration)
@@ -515,8 +517,10 @@ class LivePipeline(
         val eligible = candidates.filter {
             !guard.blocked(stable.board, it.move, stable.evidence().wasteSignature) }
         val choice = eligible.firstOrNull { MoveExecutor.canLocate(it.move, stable, layout) }
-        if (diagnosticBoardKey == lastDiagnosticBoardKey) {
+        val decisionLogAt = SystemClock.elapsedRealtime()
+        if (decisionLogAt - lastDecisionDiagnosticAt >= 1_500L) {
             RoundDiagnostics.record("DECISION", "candidates=${candidates.size}; eligible=${eligible.size}; selected=${choice?.move?.signature ?: "none"}; score=${choice?.score ?: "none"}")
+            lastDecisionDiagnosticAt = decisionLogAt
         }
         val stockStats = stockMemory.summary()
         val scoreStats = scoreLedger.stats()

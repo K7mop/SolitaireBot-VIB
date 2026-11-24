@@ -2,6 +2,7 @@ package com.retq.solitairebot.capture
 
 import com.retq.solitairebot.control.FloatingControls
 import com.retq.solitairebot.control.LivePipeline
+import com.retq.solitairebot.control.RoundDiagnostics
 import com.retq.solitairebot.control.GestureAccessibilityService
 import com.retq.solitairebot.storage.AppStore
 import com.retq.solitairebot.storage.CaptureMonitorStore

@@ -213,7 +213,8 @@ class AppStore(context: Context) {
             fun boxes(key: String): List<NormalizedBox> = data.getJSONArray(key).let { arr ->
                 (0 until arr.length()).map { decodeBox(arr.getJSONArray(it)) }
             }
-            NormalizedBoardLayout(box("stock"), box("waste"), boxes("foundations"), boxes("columns"))
+            NormalizedBoardLayout(box("stock"), box("waste"), boxes("foundations"), boxes("columns"),
+                if (data.has("screenBounds")) box("screenBounds") else NormalizedBox(0f, 0f, 1f, 1f))
         } catch (_: Exception) {
             prefs.edit().putBoolean("calibrated", false).remove("layout").apply()
             invalidateCalibrationProof()
@@ -229,6 +230,7 @@ class AppStore(context: Context) {
         val obj = JSONObject().put("stock", encodeBox(layout.stock)).put("waste", encodeBox(layout.waste))
             .put("foundations", JSONArray(layout.foundations.map(::encodeBox)))
             .put("columns", JSONArray(layout.tableauColumns.map(::encodeBox)))
+            .put("screenBounds", encodeBox(layout.screenBounds))
         prefs.edit().putString("layout", obj.toString()).putBoolean("calibrated", true)
             .putBoolean("automatic_layout", automatic)
             .putBoolean("calibration_armed", true).putString("calibration_session_id", proof.sessionId)

@@ -103,6 +103,7 @@ class ScreenCaptureService : Service() {
     @Volatile private var snapshotSurfaceClear = false
     @Volatile private var capturedContentVisible = true
     @Volatile private var lastAnalysisAtMs = 0L
+    @Volatile private var lastPipelineSampleDiagnosticAtMs = 0L
     @Volatile private var lastFrameDetailsAtMs = 0L
     private var lastNotificationAtMs = 0L
     private var lastNotificationText = ""
@@ -223,6 +224,7 @@ class ScreenCaptureService : Service() {
                 live.stopAuto("أوقف المستخدم الحركة والقراءة")
             }
             ACTION_TOGGLE_AUTO, ACTION_START_AUTO -> {
+                RoundDiagnostics.record("SERVICE_AUTO_COMMAND", "action=${action.substringAfterLast('.')}; preparing=${store.automaticPreparing}; alreadyAuto=${live.autoPlaying}; snapshotPending=${snapshotGate.pendingRequestId != null}")
                 if (store.automaticPreparing) {
                     cancelAutomaticSetup("أوقف المستخدم التهيئة التلقائية")
                     val cancelled = snapshotGate.pendingRequestId
@@ -232,10 +234,13 @@ class ScreenCaptureService : Service() {
                 else if (live.autoPlaying && action == ACTION_TOGGLE_AUTO) live.stopAuto("أوقف المستخدم التشغيل التلقائي")
                 else if (live.autoPlaying) store.aiStatus = "التنفيذ التلقائي يعمل بالفعل"
                 else if (snapshotGate.pendingRequestId != null) store.aiStatus = "انتظر اكتمال حفظ اللقطة"
-                else if (!prepareWorkSurface()) store.aiStatus = "تعذر وضع زر الإيقاف خارج مناطق الأوراق؛ راجع المعايرة"
-                else {
+                else if (!prepareWorkSurface()) {
+                    RoundDiagnostics.record("AUTO_REJECT", "prepareWorkSurface returned false")
+                    store.aiStatus = "تعذر وضع زر الإيقاف خارج مناطق الأوراق؛ راجع المعايرة"
+                } else {
                     store.monitoringEnabled = true
                     val result = live.startAuto(reader?.width ?: 0, reader?.height ?: 0)
+                    RoundDiagnostics.record("AUTO_RESULT", "accepted=${result.accepted}; message=${result.message}")
                     if (!result.accepted) restoreAutoOverlay()
                 }
             }
@@ -508,6 +513,10 @@ class ScreenCaptureService : Service() {
             val wantsBoard = workReady && live.wantsFrame(now)
             val needsMonitorSample = !live.actionActive && !live.readingManual &&
                 now - lastFrameDetailsAtMs >= 1_000L
+            if (now - lastPipelineSampleDiagnosticAtMs >= 2_500L) {
+                lastPipelineSampleDiagnosticAtMs = now
+                RoundDiagnostics.record("CAPTURE_SAMPLE", "frame=$frameId; monitoring=${store.monitoringEnabled}; workReady=$workReady; wantsBoard=$wantsBoard; auto=${live.autoPlaying}; assistantVisible=${store.assistantUiVisible}; contentVisible=$capturedContentVisible; workSurfaceClear=$workSurfaceClear; snapshot=$takeSnapshot")
+            }
             if (!takeSnapshot && (!store.monitoringEnabled ||
                 now - lastAnalysisAtMs < analysisGap || (!wantsBoard && !needsMonitorSample))) return
             lastAnalysisAtMs = now
@@ -572,6 +581,7 @@ class ScreenCaptureService : Service() {
                     }
                 }
             } catch (error: Exception) {
+                RoundDiagnostics.record("CAPTURE_ERROR", "${error.javaClass.simpleName}: ${error.message ?: "no details"}; frame=$frameId")
                 val cancelled = synchronized(snapshotGate) {
                     if (capturing.get() && generation.get() == session && incoming === reader &&
                         snapshotGate.pendingRequestId == request) {

@@ -60,7 +60,7 @@ object RoundDiagnostics {
 
     @Synchronized fun record(kind: String, details: String) {
         val elapsedMs = ((System.nanoTime() - startMs) / 1_000_000L).coerceAtLeast(0L)
-        val clean = details.replace('\\n', ' ').take(260)
+        val clean = details.replace('\n', ' ').take(260)
         val key = kind.take(24)
         if (key in counts || counts.size < 32) counts[key] = (counts[key] ?: 0) + 1
         timingPattern.findAll(clean).forEach { match ->

@@ -83,6 +83,8 @@ class LivePipeline(
     private var lastStatusAt = 0L
     private var lastDiagnosticBoardKey: String? = null
     private var lastDecisionDiagnosticAt = 0L
+    private var lastObserveDiagnosticAt = 0L
+    private var lastReadoutDiagnosticAt = 0L
 
     init { RoundDiagnostics.attach(context) }
 
@@ -170,15 +172,25 @@ class LivePipeline(
     }
 
     fun startAuto(width: Int, height: Int): CommandResult {
+        RoundDiagnostics.record("AUTO_REQUEST", "startAuto called; width=$width; height=$height; mode=$mode; capture=${monitor.captureActive}; monitoring=${monitor.monitoringEnabled}")
         if (mode == Mode.AUTO) return CommandResult(false, stopAuto("أوقف المستخدم التحريك التلقائي"))
         if (mode != Mode.IDLE || LiveSession.moveInFlight)
             return reject("أكمل القراءة أو النقلة الحالية قبل بدء التلقائي")
         val problem = prerequisites(true)
-        if (problem != null) return reject(problem)
-        if (!app.matchesReferenceAspect(width, height)) return reject("أبعاد المشاركة تختلف عن المعايرة")
+        if (problem != null) {
+            RoundDiagnostics.record("AUTO_REJECT", "prerequisite: $problem")
+            return reject(problem)
+        }
+        if (!app.matchesReferenceAspect(width, height)) {
+            RoundDiagnostics.record("AUTO_REJECT", "capture aspect mismatch; width=$width; height=$height")
+            return reject("أبعاد المشاركة تختلف عن المعايرة")
+        }
         refreshRoundHistory()
         guard.start()
-        if (!guard.enabled) return reject(guard.stoppedBecause)
+        if (!guard.enabled) {
+            RoundDiagnostics.record("AUTO_REJECT", "guard: ${guard.stoppedBecause}")
+            return reject(guard.stoppedBecause)
+        }
         arm(Mode.AUTO)
         autoStartedAt = SystemClock.elapsedRealtime()
         failuresThisRun = 0
@@ -333,6 +345,10 @@ class LivePipeline(
     @Synchronized fun observe(bitmap: Bitmap, frameAtMs: Long = SystemClock.elapsedRealtime(),
         frameId: Long = frameAtMs, captureGeneration: Long = this.captureGeneration) {
         if (mode == Mode.IDLE || captureGeneration != this.captureGeneration || frameAtMs < framesNotBefore) return
+        if (frameAtMs - lastObserveDiagnosticAt >= 2_000L) {
+            lastObserveDiagnosticAt = frameAtMs
+            RoundDiagnostics.record("OBSERVE", "frame=$frameId; mode=$mode; size=${bitmap.width}x${bitmap.height}; generation=$captureGeneration")
+        }
         val request = workEpoch.get()
         if (workerEpoch != request) { workerEpoch = request; workerLastVisionAt = 0L }
         // Regular moves can be checked more responsively; when no safe move
@@ -392,6 +408,10 @@ class LivePipeline(
                 proof?.snapshot?.bitmap?.let { if (!it.isRecycled) it.recycle() }
                 automaticReference?.bitmap?.let { if (!it.isRecycled) it.recycle() }
             }
+            if (frameAtMs - lastReadoutDiagnosticAt >= 1_500L) {
+                lastReadoutDiagnosticAt = frameAtMs
+                RoundDiagnostics.record("READOUT", "frame=$frameId; found=${readout.found}; confidence=${readout.confidence}; calibrated=${readout.calibrated}; unknown=${readout.unknownRegions.joinToString().ifBlank { "none" }}; warnings=${readout.warnings.take(2).joinToString().take(120)}")
+            }
             handedToOwner = main.post {
                 try {
                     if (request == workEpoch.get() && mode != Mode.IDLE &&
@@ -400,6 +420,7 @@ class LivePipeline(
                 } finally { observationInFlight.set(false) }
             }
         } catch (error: RuntimeException) {
+            RoundDiagnostics.record("READ_ERROR", "${error.javaClass.simpleName}: ${error.message ?: "no details"}; mode=$mode")
             handedToOwner = main.post {
                 try {
                     if (request == workEpoch.get() && mode != Mode.IDLE) {
@@ -424,9 +445,18 @@ class LivePipeline(
     }
 
     private fun accept(frame: VisionReadout) {
-        if (!environmentValid() || !GestureAccessibilityService.isTargetForeground(targetAtStart)) return
+        if (!environmentValid() || !GestureAccessibilityService.isTargetForeground(targetAtStart)) {
+            if (SystemClock.elapsedRealtime() - lastReadoutDiagnosticAt >= 1_500L) {
+                lastReadoutDiagnosticAt = SystemClock.elapsedRealtime()
+                RoundDiagnostics.record("ACCEPT_DROP", "environment/foreground invalid; environment=${environmentValid()}; targetForeground=${GestureAccessibilityService.isTargetForeground(targetAtStart)}")
+            }
+            return
+        }
         if (frame.capturedAtMs < framesNotBefore ||
-            frame.capturedAtMs < GestureAccessibilityService.foregroundObservedAtMs) return
+            frame.capturedAtMs < GestureAccessibilityService.foregroundObservedAtMs) {
+            RoundDiagnostics.record("ACCEPT_DROP", "frame predates action/foreground fence; frame=${frame.capturedAtMs}; fence=${maxOf(framesNotBefore, GestureAccessibilityService.foregroundObservedAtMs)}")
+            return
+        }
         val revision = GestureAccessibilityService.foregroundWindowRevision
         if (observedWindowRevision != null && observedWindowRevision != revision) {
             cancelWork("تغيّرت نافذة اللعبة؛ أعد بدء القراءة")

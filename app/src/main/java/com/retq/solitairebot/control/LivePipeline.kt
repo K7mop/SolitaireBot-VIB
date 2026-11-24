@@ -81,6 +81,9 @@ class LivePipeline(
     private var lastSavedObservationKey: String? = null
     private var lastSavedObservationAt = 0L
     private var lastStatusAt = 0L
+    private var lastDiagnosticBoardKey: String? = null
+
+    init { RoundDiagnostics.attach(context) }
 
     // Worker-owned only; never reset or mutate from a UI command.
     private val glyphs by lazy { GlyphTemplates(context) }
@@ -122,6 +125,8 @@ class LivePipeline(
         lastScoreLogged = null
         currentRoundId = app.roundId
         RoundDiagnostics.reset(currentRoundId)
+        lastDiagnosticBoardKey = null
+        RoundDiagnostics.record("CAPTURE", "screen capture session initialized")
         outcomes.clear()
         LiveSession.beginSession(captureGeneration)
         monitor.aiStatus = "اضغط «لقطة وبدء تلقائي» عندما تظهر لوحة اللعبة؛ ستستمر القراءة والحركات تلقائيًا"
@@ -178,7 +183,7 @@ class LivePipeline(
         readErrors = 0
         candidateCacheKey = null
         monitor.autoPlaying = true
-        RoundDiagnostics.record("AUTO", "started; draw mode=${app.drawModePreference}")
+        RoundDiagnostics.record("AUTO", "started; draw mode=${app.drawModePreference}; target=${targetAtStart ?: "unknown"}")
         monitor.aiStatus = "التلقائي جاهز؛ انتقل إلى اللعبة المعايرة. يمكنك إيقافه من الزر العائم"
         return CommandResult(true, monitor.aiStatus)
     }
@@ -397,6 +402,7 @@ class LivePipeline(
                 try {
                     if (request == workEpoch.get() && mode != Mode.IDLE) {
                         if (mode == Mode.AUTO && environmentValid()) {
+                            RoundDiagnostics.record("READ_ERROR", "${error.javaClass.simpleName}: ${error.message ?: "no details"}")
                             // Failed OCR/bitmap processing is never a reason to tap
                             // blindly or to terminate the timed session prematurely.
                             readErrors++
@@ -454,6 +460,11 @@ class LivePipeline(
             return
         }
         lastStableAt = stable.capturedAtMs
+        val diagnosticBoardKey = stable.board.toString()
+        if (diagnosticBoardKey != lastDiagnosticBoardKey) {
+            RoundDiagnostics.record("BOARD", "stable; found=${stable.found}; confidence=${stable.confidence}; unknown=${stable.unknownRegions.joinToString().ifBlank { "none" }}")
+            lastDiagnosticBoardKey = diagnosticBoardKey
+        }
         readErrors = 0
         stockMemory.observe(stable.board, stable.evidence().wasteSignature)
         deckKnowledge.observe(stable.board)
@@ -504,6 +515,9 @@ class LivePipeline(
         val eligible = candidates.filter {
             !guard.blocked(stable.board, it.move, stable.evidence().wasteSignature) }
         val choice = eligible.firstOrNull { MoveExecutor.canLocate(it.move, stable, layout) }
+        if (diagnosticBoardKey == lastDiagnosticBoardKey) {
+            RoundDiagnostics.record("DECISION", "candidates=${candidates.size}; eligible=${eligible.size}; selected=${choice?.move?.signature ?: "none"}; score=${choice?.score ?: "none"}")
+        }
         val stockStats = stockMemory.summary()
         val scoreStats = scoreLedger.stats()
         val diagnostic = "قانونية ${candidates.size} / غير مكررة ${eligible.size} / قابلة للتنفيذ " +

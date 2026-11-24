@@ -100,6 +100,9 @@ class MainActivity : AsyncActivity() {
         root.addView(monitoringButton)
         snapshotButton = button("لقطة وتهيئة اللوحة") { requestScreenSnapshot() }
         root.addView(snapshotButton)
+        root.addView(button("ضبط مقاسات الشاشة") {
+            startActivity(Intent(this, CalibrationActivity::class.java))
+        })
         root.addView(button("عرض آخر لقطة محفوظة") { showSavedSnapshot() })
         val advanced = LinearLayout(this).apply {
             orientation = LinearLayout.VERTICAL
@@ -109,7 +112,7 @@ class MainActivity : AsyncActivity() {
             advanced.visibility = if (advanced.visibility == View.GONE) View.VISIBLE else View.GONE
         })
         root.addView(advanced)
-        advanced.addView(button("معايرة مناطق اللعبة من آخر لقطة") {
+        advanced.addView(button("ضبط مناطق الأوراق بالتفصيل") {
             startActivity(Intent(this, CalibrationActivity::class.java))
         })
         advanced.addView(button("تعليم أشكال الأوراق من آخر لقطة") {

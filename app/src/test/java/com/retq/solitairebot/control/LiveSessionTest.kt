@@ -114,6 +114,79 @@ class LiveSessionTest {
         assertNotNull(LiveSession.beginAction(secondFresh, move, 12_000L))
     }
 
+
+    @Test fun `newly revealed face-up card is accepted before the next move is planned`() {
+        val eightHearts = Card(8, Suit.HEARTS)
+        val nineClubs = Card(9, Suit.CLUBS)
+        val sevenSpades = Card(7, Suit.SPADES)
+        val beforeBoard = BoardState(
+            listOf(
+                TableauColumn(1, listOf(eightHearts)),
+                TableauColumn(0, listOf(nineClubs))
+            ) + List(5) { TableauColumn(0, emptyList()) },
+            Suit.entries.associateWith { 0 }, null, StockStatus.UNKNOWN
+        )
+        val afterBoard = BoardState(
+            listOf(
+                TableauColumn(0, listOf(sevenSpades)),
+                TableauColumn(0, listOf(nineClubs, eightHearts))
+            ) + List(5) { TableauColumn(0, emptyList()) },
+            Suit.entries.associateWith { 0 }, null, StockStatus.UNKNOWN
+        )
+        fun observed(board: BoardState, at: Long): VisionReadout {
+            val positions = mutableMapOf<String, CardPosition>()
+            board.columns.forEachIndexed { index, column ->
+                column.top?.let { card ->
+                    positions["T$index"] = CardPosition(index * 100 + 10, 700, 80, 120, card, 1f)
+                }
+            }
+            val confidence = (0..6).associate { "T$it" to 1f } +
+                Suit.entries.associate { "F${it.symbol}" to 1f } + mapOf("W" to 1f)
+            val evidence = ObservationEvidence(
+                observedColumns = (0..6).toSet(),
+                emptyColumns = board.columns.indices.filter { board.columns[it].definitelyEmpty }.toSet(),
+                completeColumns = (0..6).toSet(),
+                emptyFoundations = Suit.entries.toSet(),
+                wasteEmpty = true,
+                regionConfidences = confidence
+            )
+            return VisionReadout(
+                board, positions, positions.size, 1f, true, emptyList(), at,
+                1080, 2316, Suit.entries.toSet(), emptySet(),
+                capturedAtMs = at, frameId = at, sessionId = 7L,
+                layoutRevision = 1L, observationEvidence = evidence
+            )
+        }
+
+        // The covered card is not in the first board and therefore cannot be selected.
+        assertFalse(MoveGenerator.generate(beforeBoard).any {
+            it is Move.TableauToTableau && sevenSpades in it.cards
+        })
+        val move = Move.TableauToTableau(0, 0, 1, listOf(eightHearts))
+        val firstBefore = observed(beforeBoard, 11_100L)
+        LiveSession.acceptObservation(firstBefore, 11_100L)
+        val stableBefore = observed(beforeBoard, 11_600L)
+        LiveSession.acceptObservation(stableBefore, 11_600L)
+        LiveSession.publishSuggestion(Suggestion(move, 100, "move the exposed card"))
+        val action = checkNotNull(LiveSession.beginAction(stableBefore, move, 11_600L))
+        assertEquals(LiveSession.Result.DELIVERED,
+            LiveSession.gestureResult(action.id, true, nowMs = 12_000L).result)
+
+        // Two independent post-action frames now contain the newly face-up 7S.
+        assertEquals(LiveSession.Result.UNCHANGED,
+            LiveSession.acceptObservation(observed(afterBoard, 12_500L), 12_500L).result)
+        assertEquals(LiveSession.Result.CONFIRMED,
+            LiveSession.acceptObservation(observed(afterBoard, 13_000L), 13_000L).result)
+        val accepted = checkNotNull(LiveSession.readout)
+        assertEquals(sevenSpades, accepted.board.columns[0].top)
+
+        // The next solver pass can legally use the newly revealed card on the 8H.
+        val nextMove = Move.TableauToTableau(0, 0, 1, listOf(sevenSpades))
+        assertTrue(MoveGenerator.generate(accepted.board).contains(nextMove))
+        LiveSession.publishSuggestion(Suggestion(nextMove, 90, "use the newly revealed card"))
+        assertNotNull(LiveSession.beginAction(accepted, nextMove, 13_001L))
+    }
+
     @Test fun `post action verification also requires both frames within freshness budget`() {
         val action = pending()
         LiveSession.gestureResult(action.id, true, nowMs = 12_000L)

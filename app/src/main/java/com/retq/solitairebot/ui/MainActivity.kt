@@ -8,6 +8,12 @@ import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.Color
 import android.graphics.Typeface
+import android.graphics.Paint
+import android.graphics.pdf.PdfDocument
+import android.text.Layout
+import android.text.StaticLayout
+import android.text.TextDirectionHeuristics
+import android.text.TextPaint
 import android.media.projection.MediaProjectionConfig
 import android.media.projection.MediaProjectionManager
 import android.net.Uri
@@ -32,6 +38,9 @@ import com.retq.solitairebot.storage.AppStore
 import com.retq.solitairebot.vision.GlyphTemplates
 import com.retq.solitairebot.control.GestureAccessibilityService
 import com.retq.solitairebot.control.RoundDiagnostics
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 /** First-screenshot automatic local practice, with advanced manual fallback tools. */
 class MainActivity : AsyncActivity() {
@@ -48,6 +57,7 @@ class MainActivity : AsyncActivity() {
     private val templates by lazy { GlyphTemplates(this) }
     private var templateSummary = "جار تحميل تغطية القوالب…"
     private var previewVersion = 0
+    private var pendingDiagnosticReport: String? = null
     private var snapshotBaselineId: String? = null
     private var overlaySettingsPending = false
     private var captureAfterOverlay = false
@@ -163,14 +173,20 @@ class MainActivity : AsyncActivity() {
         root.addView(startAutoButton)
         root.addView(stopAutoButton)
 
-        root.addView(button("تصدير تقرير الجولة") {
-            val report = RoundDiagnostics.report()
-            val share = Intent(Intent.ACTION_SEND).apply {
-                type = "text/plain"
-                putExtra(Intent.EXTRA_SUBJECT, "SolitaireBot round diagnostics")
-                putExtra(Intent.EXTRA_TEXT, report)
+        root.addView(button("تصدير تقرير الجولة PDF") {
+            pendingDiagnosticReport = RoundDiagnostics.report()
+            val fileStamp = SimpleDateFormat("yyyyMMdd-HHmmss", Locale.US).format(Date())
+            val export = Intent(Intent.ACTION_CREATE_DOCUMENT).apply {
+                addCategory(Intent.CATEGORY_OPENABLE)
+                type = "application/pdf"
+                putExtra(Intent.EXTRA_TITLE, "SolitaireBot-VIB-Round-Report-$fileStamp.pdf")
             }
-            startActivity(Intent.createChooser(share, "مشاركة تقرير الجولة"))
+            try {
+                startActivityForResult(export, 703)
+            } catch (error: Exception) {
+                pendingDiagnosticReport = null
+                Toast.makeText(this, "تعذر فتح نافذة حفظ التقرير: ${error.message}", Toast.LENGTH_LONG).show()
+            }
         })
         root.addView(button("إيقاف مشاركة الشاشة") {
             if (store.captureActive) sendControl(ScreenCaptureService.ACTION_STOP)
@@ -198,6 +214,77 @@ class MainActivity : AsyncActivity() {
             requestPermissions(arrayOf(Manifest.permission.POST_NOTIFICATIONS), 702)
         }
         refresh()
+    }
+
+    private fun writeDiagnosticsPdf(destination: Uri, report: String) {
+        val pageWidth = 595
+        val pageHeight = 842
+        val margin = 42f
+        val bodyTop = 112f
+        val bodyBottom = 786f
+        val bodyHeight = bodyBottom - bodyTop
+        val textPaint = TextPaint(Paint.ANTI_ALIAS_FLAG).apply {
+            color = Color.rgb(35, 45, 58)
+            textSize = 9.4f
+            typeface = Typeface.create("sans-serif", Typeface.NORMAL)
+        }
+        val layout = StaticLayout.Builder.obtain(report, 0, report.length, textPaint,
+            (pageWidth - margin * 2).toInt())
+            .setAlignment(Layout.Alignment.ALIGN_NORMAL)
+            .setTextDirection(TextDirectionHeuristics.FIRSTSTRONG_RTL)
+            .setLineSpacing(3f, 1.08f)
+            .setIncludePad(true)
+            .build()
+        val pageCount = maxOf(1, (layout.height / bodyHeight).toInt() +
+            if (layout.height % bodyHeight > 0f) 1 else 0)
+        val document = PdfDocument()
+        try {
+            for (pageNumber in 0 until pageCount) {
+                val page = document.startPage(
+                    PdfDocument.PageInfo.Builder(pageWidth, pageHeight, pageNumber + 1).create()
+                )
+                val canvas = page.canvas
+                canvas.drawColor(Color.WHITE)
+                val headerPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+                    color = Color.rgb(25, 43, 68)
+                    textSize = 15f
+                    typeface = Typeface.create("sans-serif", Typeface.BOLD)
+                }
+                canvas.drawText("SOLITAIREBOT VIB", margin, 42f, headerPaint)
+                val subtitlePaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+                    color = Color.rgb(95, 108, 124)
+                    textSize = 8.5f
+                    typeface = Typeface.create("sans-serif", Typeface.NORMAL)
+                }
+                canvas.drawText("ROUND DIAGNOSTICS REPORT", margin, 59f, subtitlePaint)
+                canvas.drawText(
+                    SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.US).format(Date()),
+                    margin, 76f, subtitlePaint
+                )
+                val rulePaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+                    color = Color.rgb(218, 225, 234)
+                    strokeWidth = 1f
+                }
+                canvas.drawLine(margin, 91f, pageWidth - margin, 91f, rulePaint)
+                canvas.save()
+                canvas.clipRect(margin, bodyTop, pageWidth - margin, bodyBottom)
+                canvas.translate(margin, bodyTop - pageNumber * bodyHeight)
+                layout.draw(canvas)
+                canvas.restore()
+                canvas.drawLine(margin, 804f, pageWidth - margin, 804f, rulePaint)
+                canvas.drawText("Private diagnostic export · No screenshots or account credentials",
+                    margin, 820f, subtitlePaint)
+                val pageLabel = "Page ${pageNumber + 1} / $pageCount"
+                canvas.drawText(pageLabel, pageWidth - margin - subtitlePaint.measureText(pageLabel),
+                    820f, subtitlePaint)
+                document.finishPage(page)
+            }
+            val output = contentResolver.openOutputStream(destination)
+                ?: throw IllegalStateException("تعذر فتح ملف الحفظ")
+            output.use { document.writeTo(it) }
+        } finally {
+            document.close()
+        }
     }
 
     private fun dp(value: Int): Int = (value * resources.displayMetrics.density + .5f).toInt()
@@ -293,6 +380,22 @@ class MainActivity : AsyncActivity() {
     @Deprecated("MediaProjection consent without AndroidX on API 26+")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == 703) {
+            val report = pendingDiagnosticReport
+            pendingDiagnosticReport = null
+            val destination = data?.data
+            if (resultCode == RESULT_OK && destination != null && report != null) {
+                background(
+                    work = { writeDiagnosticsPdf(destination, report) },
+                    onError = { Toast.makeText(this, "فشل تصدير التقرير: ${it.message}", Toast.LENGTH_LONG).show() }
+                ) {
+                    Toast.makeText(this, "تم حفظ تقرير الجولة بصيغة PDF", Toast.LENGTH_LONG).show()
+                }
+            } else if (resultCode != RESULT_CANCELED) {
+                Toast.makeText(this, "لم يتم تحديد مكان لحفظ التقرير", Toast.LENGTH_SHORT).show()
+            }
+            return
+        }
         if (requestCode != 701) return
         projectionRequestInFlight = false
         if (resultCode != RESULT_OK || data == null) {

@@ -100,6 +100,22 @@ class LiveSessionTest {
             LiveSession.gestureResult(action.id, true, nowMs = 21_000L).result)
     }
 
+    @Test fun `starting a new round clears prior round move history`() {
+        val action = pending()
+        LiveSession.gestureResult(action.id, true, nowMs = 12_000L)
+        LiveSession.acceptObservation(frame(true, 12_500L), 12_500L)
+        assertEquals(LiveSession.Result.CONFIRMED,
+            LiveSession.acceptObservation(frame(true, 13_000L), 13_000L).result)
+        assertTrue(LiveSession.recentSignatures().isNotEmpty())
+
+        LiveSession.beginSession(7L)
+
+        assertTrue(LiveSession.recentSignatures().isEmpty())
+        assertNull(LiveSession.readout)
+        assertNull(LiveSession.suggestion)
+        assertFalse(LiveSession.moveInFlight)
+    }
+
     @Test fun `fresh frame cannot pair with an expired earlier observation`() {
         LiveSession.acceptObservation(frame(false, 10_000L), 10_000L)
         val afterGap = frame(false, 11_500L)

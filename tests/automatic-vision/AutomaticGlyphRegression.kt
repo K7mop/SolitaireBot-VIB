@@ -45,6 +45,21 @@ fun main(args:Array<String>) {
     check(suitCorrect==16){"Suit icon recognition regression"}
     check(correct>=600){"Insufficient clear generated card coverage"}
     check(lib.glyphPatternCount==0){"Bundled knowledge must not pretend to be user teaching"}
+    // The target game stacks face-up cards with only the upper index strip exposed.
+    // Keep the first 40% of each card and blank the covered lower portion; automatic
+    // recognition must still classify the visible rank+suit without claiming a full face.
+    var partialCorrect=0
+    Card.RANKS.flatMap { rank -> listOf("C","D","H","S").map { suit -> rank+suit } }.forEach { code ->
+        val im=ImageIO.read(root.resolve("dejavu_sans_33_$code.png"))
+        val partial=Bitmap(im.width,im.height,im.getRGB(0,0,im.width,im.height,null,0,im.width))
+        for(y in (im.height*40/100) until im.height) for(x in 0 until im.width)
+            partial.setPixel(x,y,0xFFFFFF)
+        if(lib.recognizeAutomatic(partial,0,0,partial.width,partial.height,fullFaceVisible=false)?.first?.code==code)
+            partialCorrect++
+    }
+    println("Short exposed-strip fixtures: $partialCorrect/52 correctly recognized at 40% visibility")
+    check(partialCorrect>=45) { "Bundled recognizer regressed on overlapped face-up cards" }
+
     val batch=listOf("AS","2H","3C","4D","5S","6H","7C").map { code ->
         val im=ImageIO.read(root.resolve("dejavu_sans_33_$code.png"))
         Bitmap(im.width,im.height,im.getRGB(0,0,im.width,im.height,null,0,im.width))

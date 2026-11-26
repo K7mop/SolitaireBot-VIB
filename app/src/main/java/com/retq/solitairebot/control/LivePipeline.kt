@@ -232,14 +232,26 @@ class LivePipeline(
     private fun refreshRoundHistory() {
         val round = app.roundId
         if (round != currentRoundId) {
+            // A new game round is a new vision/solver session even when Android's
+            // screen-capture session and calibrated layout remain unchanged.
+            // Do not carry card identities, hidden-count proofs, or queued move
+            // outcomes from the previous round into the new board.
+            readerResetEpoch.incrementAndGet()
+            outcomes.clear()
             guard.resetSession()
             stockMemory.reset()
             deckKnowledge.reset()
             scoreLedger.reset()
             hudClock.reset()
             lastScoreLogged = null
+            candidateCacheKey = null
+            candidateCache = emptyList()
+            lastDiagnosticBoardKey = null
+            lastDecisionDiagnosticAt = 0L
+            lastSavedObservationKey = null
+            lastSavedObservationAt = 0L
             RoundDiagnostics.reset(round)
-            LiveSession.cancelPending("بدأت جولة جديدة")
+            LiveSession.beginSession(captureGeneration)
             currentRoundId = round
         }
     }

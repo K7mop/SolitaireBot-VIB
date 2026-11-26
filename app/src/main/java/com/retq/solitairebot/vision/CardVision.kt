@@ -427,8 +427,9 @@ class CardVision(private val templates: GlyphTemplates) {
         if (exposed >= height * .49f) for (dy in offsets) {
             val y = estimatedY + dy
             if (x < 0 || y < 0 || x + width > bitmap.width || y + height > bitmap.height) continue
-            val match = (if (automaticMode) templates.recognizeAutomatic(bitmap, x, y, width, height,
-                fullFaceVisible = exposed >= height * .98f) else null)
+            val match = (if (automaticMode && exposed >= max(12, (height * .18f).toInt()))
+                templates.recognizeAutomatic(bitmap, x, y, width, height,
+                    fullFaceVisible = exposed >= height * .98f) else null)
                 ?: templates.recognize(bitmap, x, y, width, height) ?: continue
             if (best == null || match.second > best.confidence + .0001f ||
                 (abs(match.second - best.confidence) <= .0001f && abs(dy) < abs(best.y - estimatedY)))

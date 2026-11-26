@@ -424,7 +424,7 @@ class CardVision(private val templates: GlyphTemplates) {
         // Small edge tolerance is resolution-scaled and cannot jump to another card in the column.
         val tolerance = min(4, max(1, height / 35))
         val offsets = listOf(0) + (1..tolerance).flatMap { listOf(-it, it) }
-        if (exposed >= height * .49f) for (dy in offsets) {
+        if (exposed >= max(12, (height * .18f).toInt())) for (dy in offsets) {
             val y = estimatedY + dy
             if (x < 0 || y < 0 || x + width > bitmap.width || y + height > bitmap.height) continue
             val match = (if (automaticMode && exposed >= max(12, (height * .18f).toInt()))
